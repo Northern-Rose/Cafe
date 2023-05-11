@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cafe"
         mc:Ignorable="d"
+<<<<<<< HEAD
+        Title="MainWindow" Height="800" Width="807">
+	<Grid>
+		<Rectangle Fill="White" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="170"/>
+		<Button Content="Button" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
+		<Button Content="Button" HorizontalAlignment="Left" Margin="100,69,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
+		<Button Content="Button" HorizontalAlignment="Left" Margin="190,69,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
+		<Button Content="Button" HorizontalAlignment="Left" Margin="281,69,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
+		<Button Content="Button" HorizontalAlignment="Left" Margin="371,69,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
+		<Rectangle Fill="White" HorizontalAlignment="Left" Height="50" Margin="191,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="79"/>
+		<Rectangle Fill="White" HorizontalAlignment="Left" Height="595" Margin="10,158,0,0" Stroke="Black" VerticalAlignment="Top" Width="441"/>
+		<Rectangle Fill="White" HorizontalAlignment="Left" Height="684" Margin="464,69,0,0" Stroke="Black" VerticalAlignment="Top" Width="320"/>
+		<TextBox HorizontalAlignment="Left" Height="23" Margin="-314,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+=======
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="54" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="111"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="26,78,0,0" VerticalAlignment="Top" Width="75"/>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 80e79760165676dd0f45b6351a8333d071faff73
+>>>>>>> Stashed changes
 
-    </Grid>
+	</Grid>
 </Window>
