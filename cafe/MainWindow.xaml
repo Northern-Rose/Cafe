@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cafe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="MainWindow" Height="800" Width="800" Background="#FF202020">
 	<Grid>
-		<Rectangle Fill="White" HorizontalAlignment="Left" Height="54" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="170"/>
+		<Rectangle Fill="#0AFCC4" HorizontalAlignment="Left" Height="54" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="170"/>
 		<Button Content="Button" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
 		<Button Content="Button" HorizontalAlignment="Left" Margin="100,74,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
 		<Button Content="Button" HorizontalAlignment="Left" Margin="189,74,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
 		<Button Content="Button" HorizontalAlignment="Left" Margin="279,74,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
 		<Button Content="Button" HorizontalAlignment="Left" Margin="369,74,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
-		<Rectangle Fill="White" HorizontalAlignment="Left" Height="54" Margin="189,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="80"/>
-		<Rectangle Fill="White" HorizontalAlignment="Left" Height="590" Margin="10,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="439"/>
+		<Rectangle Fill="#0AFCC4" HorizontalAlignment="Left" Height="54" Margin="189,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="80"/>
+		<Rectangle Fill="#FFBBFFEF" HorizontalAlignment="Left" Height="590" Margin="10,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="439" StrokeThickness="0"/>
 
 	</Grid>
 </Window>
