@@ -15,7 +15,10 @@
         <Button Content="Button" HorizontalAlignment="Left" Margin="369,74,0,0" VerticalAlignment="Top" Width="80" Height="80"/>
         <Rectangle Fill="#0AFCC4" HorizontalAlignment="Left" Height="54" Margin="189,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="80"/>
         <Rectangle Fill="#FFBBFFEF" HorizontalAlignment="Left" Height="590" Margin="10,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="439" StrokeThickness="0"/>
-        <Rectangle Fill="#0AFCC4" HorizontalAlignment="Left" Height="181" Margin="454,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="330"/>
+        <Rectangle Fill="#FF8DFFE5" HorizontalAlignment="Left" Height="590" Margin="459,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="317"/>
+        <Button Content="New Order" HorizontalAlignment="Left" Margin="459,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Background="#FF39FF3C"/>
+        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="621,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FF4181FF"/>
+        <Button Content="Submit order" HorizontalAlignment="Left" Margin="459,674,0,0" VerticalAlignment="Top" Width="317" Height="80" Click="Button_Click" Background="#FF00DFFF"/>
 
     </Grid>
 </Window>
