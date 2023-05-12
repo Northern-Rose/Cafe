@@ -28,3 +28,5 @@ C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.csproj.CoreCompileInputs.cache
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.exe
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.pdb
+C:\Users\270235677\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\WindowLogin.g.cs
+C:\Users\270235677\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\WindowLogin.baml
