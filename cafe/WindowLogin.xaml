@@ -7,10 +7,11 @@
         mc:Ignorable="d" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="670*"/>
-            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="272,183,0,0" VerticalAlignment="Top" Width="156" Height="58" Click="Button_Click"/>
+        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click" Margin="0,0,0,4" Grid.Column="1"/>
 
     </Grid>
 </Window>
