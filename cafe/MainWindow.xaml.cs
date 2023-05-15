@@ -37,7 +37,10 @@ namespace cafe
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            WindowLogin mw = new WindowLogin();
+            mw.Show();
+            this.Close();
         }
+
     }
 }
