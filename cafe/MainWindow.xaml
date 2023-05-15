@@ -17,9 +17,8 @@
         <Rectangle Fill="MidnightBlue" HorizontalAlignment="Left" Height="590" Margin="459,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="317"/>
         <Button Content="New Order" HorizontalAlignment="Left" Margin="459,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Background="#FF39FF3C"/>
         <Button Content="Past Orders" HorizontalAlignment="Left" Margin="621,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FFFF5F1F"/>
-        <Button Content="Submit order" HorizontalAlignment="Left" Margin="459,674,0,0" VerticalAlignment="Top" Width="317" Height="80" Click="Button_Click" Background="#FF0BD8E5"/>
+        <Button Content="Submit order" HorizontalAlignment="Left" Margin="459,674,0,0" VerticalAlignment="Top" Width="317" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
         <Button Content="Log out" HorizontalAlignment="Left" Margin="189,10,0,0" VerticalAlignment="Top" Width="80" Height="54" Background="#FF0BD8E5"/>
-        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="614,19,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FFFF5F1F"/>
 
-    </Grid>
+	</Grid>
 </Window>
