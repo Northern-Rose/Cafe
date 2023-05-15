@@ -4,14 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cafe"
-        mc:Ignorable="d" Height="450" Width="800">
+        mc:Ignorable="d" Height="800" Width="800" Background="#FF10183A">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click" Margin="0,0,0,4" Grid.Column="1"/>
+        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click" Margin="0,0,0,4" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
 
     </Grid>
 </Window>
