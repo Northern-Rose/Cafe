@@ -7,17 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800" Background="#FF030D22">
     <Grid>
-        <!--<Rectangle Fill="#FF0BD8E5" HorizontalAlignment="Left" Height="54" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="170"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="100,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Button_Click_1"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="189,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="279,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="369,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+        <!--
+        
         <Rectangle Fill="MidnightBlue" HorizontalAlignment="Left" Height="590" Margin="10,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="439" StrokeThickness="0"/>
         <Rectangle Fill="MidnightBlue" HorizontalAlignment="Left" Height="590" Margin="459,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="317"/>
         <Button Content="New Order" HorizontalAlignment="Left" Margin="459,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Background="#FF39FF3C"/>
         <Button Content="Past Orders" HorizontalAlignment="Left" Margin="621,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FFFF5F1F"/>
         <Button Content="Submit order" HorizontalAlignment="Left" Margin="459,674,0,0" VerticalAlignment="Top" Width="317" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
-        <Button Content="Log out" HorizontalAlignment="Left" Margin="189,10,0,0" VerticalAlignment="Top" Width="80" Height="54" Background="#FF0BD8E5"/>
+       
         <Button Content="Button" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>-->
 
         <Grid.RowDefinitions>
@@ -34,6 +31,17 @@
             <Rectangle Grid.Column="0" Fill="#FF0BD8E5" HorizontalAlignment="Stretch" Height="54" Stroke="Black" VerticalAlignment="Center" Margin="20,0" RadiusX="10" RadiusY="10"/>
             <Button Grid.Column="1" Content="Log out" HorizontalAlignment="Left" Margin="0,0" VerticalAlignment="Center" Width="80" Height="54" Background="#FF0BD8E5" RenderTransformOrigin="1.645,0.506" Click="Button_Click_1"/>
         </Grid>
-        
+
+        <Grid  Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Button_Click_1"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="240,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="160,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+        </Grid>
     </Grid>
 </Window>
