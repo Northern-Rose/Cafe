@@ -37,11 +37,11 @@
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Button_Click_1"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="240,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="160,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Button_Click_1"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="220,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="120,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="420,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
         </Grid>
     </Grid>
 </Window>
