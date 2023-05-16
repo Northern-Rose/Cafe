@@ -44,14 +44,14 @@ namespace cafe
 
         private void Coffee_Click(object sender, RoutedEventArgs e)
         {
-            OrangeSquare.Opacity = 100;
-            BlueSquare.Opacity = 0;
+            coffeeImages.Opacity = 100;
+            teaImmages.Opacity = 0;
         }
 
-        private void Bread_Click(object sender, RoutedEventArgs e)
+        private void Tea_drinks_Click(object sender, RoutedEventArgs e)
         {
-            OrangeSquare.Opacity = 0;
-            BlueSquare.Opacity = 100;
+            teaImmages.Opacity = 100;
+            coffeeImages.Opacity = 0;
         }
     }
 }
