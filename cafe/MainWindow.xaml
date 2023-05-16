@@ -33,13 +33,13 @@
                 <ColumnDefinition Width="459*" />
                 <ColumnDefinition Width="1454*" />
             </Grid.ColumnDefinitions>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Button_Click_1"/>
             <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="290,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882"/>
             <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+            <Button x:Name="Bread"  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A" Click="Bread_Click"/>
             <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="380,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A" Grid.ColumnSpan="2"/>
             <Button  Grid.Column="1" Content="New Order" HorizontalAlignment="Left" Margin="8.8,0,0,0" VerticalAlignment="Top" Width="155" Height="80" Background="#FF39FF3C"/>
             <Button  Grid.Column="1" Content="Past Orders" HorizontalAlignment="Left" Margin="173.8,0,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FFFF5F1F"/>
+            <Button x:Name="Coffee"  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Coffee_Click"/>
         </Grid>
 
         <Grid  Grid.Row="2">
@@ -50,6 +50,8 @@
             <Rectangle Grid.Column="0" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Margin="20,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="442" StrokeThickness="0"/>
             <Rectangle Grid.Column="1" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Stroke="Black" VerticalAlignment="Top" Width="332" Margin="5.6,0,0,0"/>
             <Button Grid.Column="1" Content="Submit order" HorizontalAlignment="Left" Margin="5.6,563,0,0" VerticalAlignment="Top" Width="332" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
+            <Rectangle x:Name="BlueSquare" Grid.Column="1" Fill="MidnightBlue" HorizontalAlignment="Left" Height="210" Margin="829.6,71,0,0" Stroke="Black" VerticalAlignment="Top" Width="241" Opacity="0"/>
+            <Rectangle x:Name="OrangeSquare" Grid.Column="1" Fill="#FFD06845" HorizontalAlignment="Left" Height="210" Margin="829.6,71,0,0" Stroke="Black" VerticalAlignment="Top" Width="231" Opacity="0"/>
         </Grid>
     </Grid>
 </Window>

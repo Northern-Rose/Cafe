@@ -42,5 +42,16 @@ namespace cafe
             this.Close();
         }
 
+        private void Coffee_Click(object sender, RoutedEventArgs e)
+        {
+            OrangeSquare.Opacity = 100;
+            BlueSquare.Opacity = 0;
+        }
+
+        private void Bread_Click(object sender, RoutedEventArgs e)
+        {
+            OrangeSquare.Opacity = 0;
+            BlueSquare.Opacity = 100;
+        }
     }
 }
