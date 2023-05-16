@@ -50,8 +50,8 @@
                 <ColumnDefinition Width="59*" />
                 <ColumnDefinition Width="44*" />
             </Grid.ColumnDefinitions>
-            <Rectangle Grid.Column="0" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Margin="20,10,0,20" Stroke="Black" VerticalAlignment="Top" Width="442" StrokeThickness="0"/>
-            <Rectangle Grid.Column="1" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Stroke="Black" VerticalAlignment="Top" Width="332" Margin="10,10,20,20"/>
+            <Rectangle Grid.Column="0" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Margin="20,0,0,20" Stroke="Black" VerticalAlignment="Top" Width="442" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Stroke="Black" VerticalAlignment="Top" Width="332" Margin="10,0,20,20"/>
         </Grid>
     </Grid>
 </Window>
