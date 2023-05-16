@@ -9,11 +9,8 @@
     <Grid>
         <!--
         
-        <Rectangle Fill="MidnightBlue" HorizontalAlignment="Left" Height="590" Margin="10,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="439" StrokeThickness="0"/>
-        <Rectangle Fill="MidnightBlue" HorizontalAlignment="Left" Height="590" Margin="459,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="317"/>
-        
-        <Button Content="Submit order" HorizontalAlignment="Left" Margin="459,674,0,0" VerticalAlignment="Top" Width="317" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
-       
+           
+              
         <Button Content="Button" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>-->
 
         <Grid.RowDefinitions>
@@ -52,6 +49,7 @@
             </Grid.ColumnDefinitions>
             <Rectangle Grid.Column="0" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Margin="20,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="442" StrokeThickness="0"/>
             <Rectangle Grid.Column="1" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Stroke="Black" VerticalAlignment="Top" Width="332" Margin="5.6,0,0,0"/>
+            <Button Grid.Column="1" Content="Submit order" HorizontalAlignment="Left" Margin="5.6,563,0,0" VerticalAlignment="Top" Width="332" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
         </Grid>
     </Grid>
 </Window>
