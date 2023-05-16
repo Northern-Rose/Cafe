@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cafe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800" Background="#FF030D22">
+        Title="MainWindow" Height="800" Width="830" Background="#FF030D22">
     <Grid>
         <!--
         
         <Rectangle Fill="MidnightBlue" HorizontalAlignment="Left" Height="590" Margin="10,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="439" StrokeThickness="0"/>
         <Rectangle Fill="MidnightBlue" HorizontalAlignment="Left" Height="590" Margin="459,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="317"/>
-        <Button Content="New Order" HorizontalAlignment="Left" Margin="459,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Background="#FF39FF3C"/>
-        <Button Content="Past Orders" HorizontalAlignment="Left" Margin="621,74,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FFFF5F1F"/>
+        
         <Button Content="Submit order" HorizontalAlignment="Left" Margin="459,674,0,0" VerticalAlignment="Top" Width="317" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
        
         <Button Content="Button" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>-->
@@ -34,14 +33,16 @@
 
         <Grid  Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="461*" />
+                <ColumnDefinition Width="342*" />
             </Grid.ColumnDefinitions>
             <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Button_Click_1"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="220,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="120,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
-            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="420,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="290,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+            <Button  Grid.Column="0" Content="Button" HorizontalAlignment="Left" Margin="380,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>
+            <Button  Grid.Column="1" Content="New Order" HorizontalAlignment="Left" Margin="9.2,0,0,0" VerticalAlignment="Top" Width="155" Height="80" Background="#FF39FF3C"/>
+            <Button  Grid.Column="1" Content="Past Orders" HorizontalAlignment="Left" Margin="174.2,0,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FFFF5F1F"/>
         </Grid>
     </Grid>
 </Window>
