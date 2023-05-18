@@ -102,19 +102,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="w-4kVRWQ.png" />
+    <Resource Include="images\w-4kVRWQ.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="download_resized-_1_.png" />
+    <Resource Include="images\download_resized-_1_.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="download_resized-_1__resized.png" />
+    <Resource Include="images\download_resized-_1__resized.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="coffee.png" />
+    <Resource Include="images\coffee.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="tea.png" />
+    <Resource Include="images\tea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\frapino.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

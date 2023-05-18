@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tea.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/frapino.jfif")]
 
 
