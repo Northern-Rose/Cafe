@@ -17,7 +17,7 @@ namespace cafe
 {
     public partial class MainWindow : Window
     {
-        public int count = 1;
+        public int count = 0;
         public MainWindow()
         {
             InitializeComponent();
