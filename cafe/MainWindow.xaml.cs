@@ -45,6 +45,8 @@ namespace cafe
             coffeeImages.Opacity = 100;
             teaImmages.Opacity = 0;
             Cold_Drink_Immages.Opacity = 0;
+            chocolateDrinkImages.Opacity = 0;
+            softDrinkImages.Opacity = 0;
         }
 
         private void Tea_drinks_Click(object sender, RoutedEventArgs e)
@@ -52,6 +54,8 @@ namespace cafe
             coffeeImages.Opacity = 0;
             teaImmages.Opacity = 100;
             Cold_Drink_Immages.Opacity = 0;
+            chocolateDrinkImages.Opacity = 0;
+            softDrinkImages.Opacity = 0;
         }
 
         private void Cold_Drinks_Click(object sender, RoutedEventArgs e)
@@ -59,6 +63,26 @@ namespace cafe
             coffeeImages.Opacity = 0;
             teaImmages.Opacity = 0;
             Cold_Drink_Immages.Opacity = 100;
+            chocolateDrinkImages.Opacity = 0;
+            softDrinkImages.Opacity = 0;
+        }
+
+        private void Choco_Drinks_Click(object sender, RoutedEventArgs e)
+        {
+            coffeeImages.Opacity = 0;
+            teaImmages.Opacity = 0;
+            Cold_Drink_Immages.Opacity = 0;
+            chocolateDrinkImages.Opacity = 100;
+            softDrinkImages.Opacity = 0;
+        }
+
+        private void Soft_Drinks_Click(object sender, RoutedEventArgs e)
+        {
+            coffeeImages.Opacity = 0;
+            teaImmages.Opacity = 0;
+            Cold_Drink_Immages.Opacity = 0;
+            chocolateDrinkImages.Opacity = 0;
+            softDrinkImages.Opacity = 100;
         }
     }
 }
