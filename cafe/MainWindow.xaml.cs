@@ -45,9 +45,6 @@ namespace cafe
             coffeeImages.Opacity = 100;
             teaImmages.Opacity = 0;
             Cold_Drink_Immages.Opacity = 0;
-
-            ButtonMinus.Opacity = 0;
-            ButtonPlus.Opacity = 100;
         }
 
         private void Tea_drinks_Click(object sender, RoutedEventArgs e)
@@ -55,10 +52,6 @@ namespace cafe
             coffeeImages.Opacity = 0;
             teaImmages.Opacity = 100;
             Cold_Drink_Immages.Opacity = 0;
-
-
-            ButtonPlus.Opacity = 0;
-            ButtonMinus.Opacity = 100;
         }
 
         private void Cold_Drinks_Click(object sender, RoutedEventArgs e)
@@ -66,17 +59,6 @@ namespace cafe
             coffeeImages.Opacity = 0;
             teaImmages.Opacity = 0;
             Cold_Drink_Immages.Opacity = 100;
-        }
-
-        private void ButtonPlus_Click(object sender, RoutedEventArgs e)
-        {
-            
-            counter.Text = Convert.ToString(count = count + 1);
-        }
-
-        private void ButtonMinus_Click(object sender, RoutedEventArgs e)
-        {
-            counter.Text = Convert.ToString(count = count - 1);
         }
     }
 }
