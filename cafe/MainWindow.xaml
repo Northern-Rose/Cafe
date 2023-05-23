@@ -74,7 +74,7 @@
                 <Image HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="images/frapino.png"/>
             </Grid>
 
-            <Grid  Grid.Column="1" Background="MidnightBlue" Margin="8,0,1111.6,10">
+            <Grid  Grid.Column="1" Background="MidnightBlue" Margin="8,0,1111.6,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0*"/>
                     <RowDefinition/>
@@ -83,7 +83,7 @@
             </Grid>
             <!--<Rectangle Grid.Column="0" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Margin="20,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="442" StrokeThickness="0"/>
             <Rectangle Grid.Column="1" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Stroke="Black" VerticalAlignment="Top" Width="332" Margin="5.6,0,0,0"/>-->
-            <Button Grid.Column="1" Content="Submit order" HorizontalAlignment="Left" Margin="8,708,0,0" VerticalAlignment="Top" Width="334" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
+            <Button Grid.Column="1" Content="Submit order" HorizontalAlignment="Left" Margin="10,718,0,0" VerticalAlignment="Top" Width="334" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
             <TextBlock x:Name="counter" Grid.Column="1" HorizontalAlignment="Left" Margin="415,138,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="87" Width="213" Foreground="White"/>
             <Button x:Name="ButtonPlus" Content="Pluss" Grid.Column="1" HorizontalAlignment="Left" Margin="374,357,0,0" VerticalAlignment="Top" Width="75" Click="ButtonPlus_Click"/>
             <Button x:Name="ButtonMinus" Content="Minus" Grid.Column="1" HorizontalAlignment="Left" Margin="480,357,0,0" VerticalAlignment="Top" Width="75" Click="ButtonMinus_Click"/>
