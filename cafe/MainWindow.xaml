@@ -23,9 +23,11 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2*" /> 
             </Grid.ColumnDefinitions>
             <Rectangle Grid.Column="0" Fill="#FF0BD8E5" HorizontalAlignment="Stretch" Height="54" Stroke="Black" VerticalAlignment="Center" Margin="20,0" RadiusX="10" RadiusY="10"/>
             <Button Grid.Column="1" Content="Log out" HorizontalAlignment="Left" Margin="0,0" VerticalAlignment="Center" Width="80" Height="54" Background="#FF0BD8E5" RenderTransformOrigin="1.645,0.506" Click="Button_Click_1"/>
+            <Image Grid.Column="2" HorizontalAlignment="Center" Height="100" Margin="10,10,0,0" VerticalAlignment="Center" Width="500" Source="images/Home Brew.png"/>
         </Grid>
 
         <Grid Margin="0,131,-0.4,0.4" Grid.RowSpan="2">
