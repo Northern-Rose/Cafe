@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cafe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" Background="#FF030D22" MinWidth="1920" MinHeight="1080">
+        Title="MainWindow" Height="1080" Width="1920" Background="#FF030D22" MinWidth="1920" MinHeight="1080"
+        WindowState="Maximized" ResizeMode="NoResize"
+        >
     <Grid>
         <!--
         
@@ -57,7 +59,7 @@
                 <Image HorizontalAlignment="Left" Height="100" Margin="115,10,0,0" VerticalAlignment="Top" Width="100" Source="images/coffee.png"/>
                 <Image HorizontalAlignment="Left" Height="100" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Source="images/coffee.png"/>
                 <Image HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="images/coffee.png"/>
-
+                
             </Grid>
 
             <Grid x:Name="teaImmages" Grid.Column="0" Background="MidnightBlue"  Margin="0,0,1,0" Opacity="0">

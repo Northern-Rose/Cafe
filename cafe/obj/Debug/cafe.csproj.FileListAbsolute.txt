@@ -49,3 +49,5 @@ C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.csproj.Generat
 C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.csproj.CoreCompileInputs.cache
 C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.exe
 C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.pdb
+C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.g.cs
+C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.baml

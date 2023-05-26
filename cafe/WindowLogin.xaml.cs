@@ -30,5 +30,12 @@ namespace cafe
             mw.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SampleSaleWindow mw = new SampleSaleWindow();
+            mw.Show();
+            this.Close();
+        }
     }
 }
