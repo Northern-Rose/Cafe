@@ -7,7 +7,7 @@
         mc:Ignorable="d" 
         WindowState="Maximized" ResizeMode="NoResize"
         Height="1080" Width="1920" Background="#FF10183A" MinWidth="1920" MinHeight="1080">
-    <Grid>
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
@@ -16,5 +16,9 @@
         <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click" Margin="0,0,0,4" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
         <Button Content="New Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click_1" Margin="879,671,878.6,321.4" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
 
-    </Grid>
+    </Grid>-->
+
+    <Window.Content >
+        <Binding Path="currentDisplayPage" />
+    </Window.Content>
 </Window>

@@ -41,26 +41,14 @@
                         <Button x:Name="Soft_Drinks"  Margin="20,30"   FontSize="20"  Content="Soft Drinks" Width="160" Height="80" Background="#FF01A8FE"/>
                         <Button x:Name="Coffee_Drinks"  Margin="20,30"  FontSize="20"   Content="Coffe Drinks" Width="160" Height="80" Background="#FFFF5F1F"/>
                         <Button x:Name="Tea_drinks"  Margin="20,30"  FontSize="20"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" />
-                        
+
                     </StackPanel>
 
-                    
+
                 </Grid>
 
                 <Grid Grid.Column="1" Background="#FF030D22"/>
             </Grid>
         </Grid>
     </Grid>
-    <!--<StackPanel>
-        <StackPanel Orientation="Horizontal" Height="auto" Background="Red">
-            <TextBlock Text="User login" 
-                        Margin="30,5,10,5"
-                       VerticalAlignment="Center" FontSize="30"/>
-            <Button Content="Log out" 
-                    Margin="30,5,10,5"
-                    VerticalAlignment="Center" Height="60" Width="150" FontSize="30" Click="Button_Click"/>
-        </StackPanel>
-
-       
-    </StackPanel>-->
 </Window>
