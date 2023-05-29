@@ -51,3 +51,5 @@ C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.exe
 C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.pdb
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.g.cs
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.baml
+C:\Users\270235677\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.g.cs
+C:\Users\270235677\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.baml
