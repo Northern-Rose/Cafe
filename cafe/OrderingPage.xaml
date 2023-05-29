@@ -46,11 +46,14 @@
 
                     <Grid Grid.Row="1">
 
-                        <ListView x:Name="ListViewProperty" Margin="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
+                        <ListView x:Name="ListViewProperty" Margin="15" 
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
 
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <WrapPanel IsItemsHost="True" Orientation="Horizontal" Width="1400" HorizontalAlignment="Center" />
+                                    <WrapPanel HorizontalAlignment="Center"/>
                                 </ItemsPanelTemplate>
                             </ListView.ItemsPanel>
 
