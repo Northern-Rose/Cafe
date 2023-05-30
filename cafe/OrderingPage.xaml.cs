@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,23 +21,86 @@ namespace cafe
     /// </summary>
     public partial class OrderingPage : Page
     {
+        List<Beverages> listOfDrinks;
         public OrderingPage()
         {
             InitializeComponent();
 
-            List<int> number = new List<int>();
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            number.Add(1);
-            ListViewProperty.ItemsSource = number;
+            var lines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
+
+            listOfDrinks = new List<Beverages>();
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var line = lines[i].Split(',');
+
+                listOfDrinks.Add(new Beverages
+                {
+                    Name = line[0],
+                    URLLink = "/images/" + line[1],
+                    DrinkType = line[2]
+                });
+            }
+
+            ListViewProperty.ItemsSource = listOfDrinks;
         }
+
+        private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
+        {
+            var newCoffeeFilterList = (from d in listOfDrinks
+                                 where d.DrinkType == "Coffee"
+                                 select d
+                                 ).ToList();
+
+            ListViewProperty.ItemsSource = newCoffeeFilterList;
+        }
+
+        private void Tea_drinks_Click(object sender, RoutedEventArgs e)
+        {
+            var newTeaFilterList = (from d in listOfDrinks
+                                where d.DrinkType == "Tea"
+                                select d
+                                 ).ToList();
+
+            ListViewProperty.ItemsSource = newTeaFilterList;
+        }
+
+        private void Soft_Drinks_Click(object sender, RoutedEventArgs e)
+        {
+            var newSoftFilterList = (from d in listOfDrinks
+                                    where d.DrinkType == "Soft"
+                                    select d
+                                 ).ToList();
+
+            ListViewProperty.ItemsSource = newSoftFilterList;
+        }
+
+        private void Cold_Drinks_Click(object sender, RoutedEventArgs e)
+        {
+            var newColdFilterList = (from d in listOfDrinks
+                                    where d.DrinkType == "Cold"
+                                    select d
+                                 ).ToList();
+
+            ListViewProperty.ItemsSource = newColdFilterList;
+        }
+
+        private void Choco_Drinks_Click(object sender, RoutedEventArgs e)
+        {
+            var newChocoFilterList = (from d in listOfDrinks
+                                    where d.DrinkType == "Choco"
+                                      select d
+                                 ).ToList();
+
+            ListViewProperty.ItemsSource = newChocoFilterList;
+        }
+    }
+
+    public class Beverages 
+    {
+        public string Name { get; set; }
+        public string URLLink { get; set; }
+
+        public string DrinkType { get; set; }
     }
 }
