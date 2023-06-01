@@ -45,9 +45,7 @@
 
                     </StackPanel>
 
-                    
-                    
-                    
+
                     <Grid Grid.Row="1">
 
                         <ListView x:Name="ListViewProperty" Margin="15" 
@@ -75,8 +73,8 @@
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
-                            
-                            
+
+
                         </ListView>
 
                     </Grid>
@@ -93,6 +91,11 @@
                         <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Refresh" Width="160" Height="80" Background="#FFE62882"/>
                         <Button x:Name="Past_Orders"  Margin="20,30"  FontSize="20"   Content="Past Orders" Width="160" Height="80" Background="#FF0BD8E5"/>
                     </StackPanel>
+
+                    <Grid Grid.Row="1" Margin="0,0,0,135.4"/>
+                    <Grid Grid.Row="1" Margin="0,735,0,0.4">
+                        <Button x:Name="Confirm"  Margin="10"  FontSize="20"   Content="Past Orders" Background="#FF0BD8E5"/>
+                    </Grid>
 
                 </Grid>
             </Grid>
