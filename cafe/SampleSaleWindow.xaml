@@ -47,8 +47,9 @@
 
                 </Grid>
 
-                <Grid Grid.Column="1" Background="#FF030D22"/>
-            </Grid>
+                
+
+          </Grid>
         </Grid>
     </Grid>
 </Window>

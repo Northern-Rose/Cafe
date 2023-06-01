@@ -37,7 +37,6 @@
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="Choco_Drinks" Margin="20,30" FontSize="20" Content="Choco Drinks" Width="160" Height="80" Background="#FFE62882" Click="Choco_Drinks_Click">
-                               
                         </Button>
                         <Button x:Name="Cold_Drinks"  Margin="20,30"  FontSize="20"   Content="Cold Drinks" Width="160" Height="80" Background="#FF0BD8E5" Click="Cold_Drinks_Click"/>
                         <Button x:Name="Soft_Drinks"  Margin="20,30"   FontSize="20"  Content="Soft Drinks" Width="160" Height="80" Background="#FF01A8FE" Click="Soft_Drinks_Click"/>
@@ -46,6 +45,9 @@
 
                     </StackPanel>
 
+                    
+                    
+                    
                     <Grid Grid.Row="1">
 
                         <ListView x:Name="ListViewProperty" Margin="15" 
@@ -80,7 +82,19 @@
                     </Grid>
                 </Grid>
 
-                <Grid Grid.Column="1" Background="#FF030D22"/>
+
+
+                <Grid Grid.Column="1" Background="#FF030D22">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height =" auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Refresh" Width="160" Height="80" Background="#FFE62882"/>
+                        <Button x:Name="Past_Orders"  Margin="20,30"  FontSize="20"   Content="Past Orders" Width="160" Height="80" Background="#FF0BD8E5"/>
+                    </StackPanel>
+
+                </Grid>
             </Grid>
         </Grid>
     </Grid>
