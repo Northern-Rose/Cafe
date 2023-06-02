@@ -82,16 +82,36 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Refresh" Width="160" Height="80" Background="#FFE62882"/>
+                        <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Refresh" Width="160" Height="80" Background="#FFE62882" Click="Refresh_Click"/>
                         <Button x:Name="Past_Orders"  Margin="20,30"  FontSize="20"   Content="Past Orders" Width="160" Height="80" Background="#FF0BD8E5"/>
                     </StackPanel>
 
                     <Grid Grid.Row="1" Margin="0,0,0,135.4">
+                        <ListView x:Name="ListViewOrderedDrinks" 
+                                  Margin="10,15,15,35" 
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  HorizontalContentAlignment="Center" 
+                                  VerticalContentAlignment="Stretch" 
+                                  Background="White">
 
-                        <ListView x:Name="ListViewOrderedDrinks" Margin="10,15,15,35" 
+                            
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Label FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="30" Content="{Binding Name}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+
+                        </ListView>
+                        <!--<ListView x:Name="ListViewOrderedDrinks" 
+                                  Margin="10,15,15,35" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Background="#FF030D22" BorderBrush="#FF030D22">
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" 
+                                  Background="#FF030D22" BorderBrush="#FF030D22">
 
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -110,7 +130,7 @@
                             </ListView.ItemTemplate>
 
 
-                        </ListView>
+                        </ListView>-->
 
                     </Grid>
                     

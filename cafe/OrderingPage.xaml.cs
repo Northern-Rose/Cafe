@@ -117,6 +117,16 @@ namespace cafe
                          ).First();
 
             listofOrder.Add(drink);
+
+
+            ListViewOrderedDrinks.ItemsSource = null;
+            ListViewOrderedDrinks.ItemsSource = listofOrder;
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            listofOrder.Clear();
+            ListViewOrderedDrinks.ItemsSource = null;
         }
     }
 
