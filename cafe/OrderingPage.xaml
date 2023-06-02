@@ -94,7 +94,7 @@
 
                     <Grid Grid.Row="1" Margin="0,0,0,135.4">
 
-                        <ListView x:Name="ListViewOrderedDrinks" Margin="15" 
+                        <ListView x:Name="ListViewOrderedDrinks" Margin="10,15,15,35" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
@@ -126,7 +126,7 @@
                     </Grid>
                     
                     <Grid Grid.Row="1" Margin="0,735,0,0.4">
-                        <Button x:Name="Confirm"  Margin="10"  FontSize="20"   Content="Past Orders" Background="#FF0BD8E5"/>
+                        <Button x:Name="Confirm"  Margin="10,10,15,10"  FontSize="20"   Content="Past Orders" Background="#FF0BD8E5"/>
                     </Grid>
 
                 </Grid>
