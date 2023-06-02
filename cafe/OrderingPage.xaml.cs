@@ -45,6 +45,7 @@ namespace cafe
             ListViewProperty.ItemsSource = listOfDrinks;
         }
 
+
         private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
         {
             var newCoffeeFilterList = (from d in listOfDrinks
