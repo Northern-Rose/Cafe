@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cafe"
       mc:Ignorable="d" 
-      d:DesignHeight="1440" d:DesignWidth="2560"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="OrderingPage">
 
     <Grid>
@@ -18,9 +18,9 @@
             <TextBlock Text="User login" 
                         Margin="30,5,10,5"
                        VerticalAlignment="Center" FontSize="30"/>
-            <Button Content="Log out" 
-                    Margin="30,5,10,5"
-                    VerticalAlignment="Center" Height="60" Width="150" FontSize="30" />
+            <Button x:Name="LogOutButton" VerticalAlignment="Center" 
+                    FontSize="30" Content="Log Out" Height="60" Width="150" 
+                    Click="LogOutButton_Click" Margin="30,5,10,4.6"/>
         </StackPanel>
 
         <Grid Grid.Row="1" Background="green">
@@ -48,11 +48,10 @@
 
                     <Grid Grid.Row="1">
 
-                        <ListView x:Name="ListViewProperty" Margin="15" 
+                        <ListView x:Name="ListViewProperty" Margin="10,49,20,-18.6" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
-
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel HorizontalAlignment="Center"/>
@@ -61,22 +60,17 @@
 
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                                        <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
-                                            <Rectangle.Fill>
-                                                <ImageBrush ImageSource="{Binding URLLink}" />
-                                            </Rectangle.Fill>
-                                        </Rectangle>
-                                        <Label FontSize="18"
-                                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                                         Content="{Binding Name}" FontFamily="Comic Sans MS" FontWeight="Bold" />
-                                    </StackPanel>
+                                    <Button Width="240" Click="Button_Click" Tag="{Binding Name}">
+                                        <StackPanel>
+                                            <Image Source="{Binding URLLink}" />
+                                            <Label FontSize="18"
+                                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Content="{Binding Name}" FontFamily="Comic Sans MS" FontWeight="Bold" />
+                                        </StackPanel>
+                                    </Button>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
-
-
                         </ListView>
-
                     </Grid>
                 </Grid>
 
@@ -108,14 +102,9 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                                        <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
-                                            <Rectangle.Fill>
-                                                <ImageBrush ImageSource="{Binding URLLink}" />
-                                            </Rectangle.Fill>
-                                        </Rectangle>
-                                        <Label FontSize="18"
-                                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                                         Content="{Binding Name}" FontFamily="Comic Sans MS" FontWeight="Bold" />
+
+                                        <Image Source="{Binding Name}" />
+
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>

@@ -19,9 +19,13 @@ namespace cafe
     /// <summary>
     /// Interaction logic for OrderingPage.xaml
     /// </summary>
+    /// 
+
     public partial class OrderingPage : Page
     {
         List<Beverages> listOfDrinks;
+
+        List<Beverages> listofOrder;
         public OrderingPage()
         {
             InitializeComponent();
@@ -29,7 +33,7 @@ namespace cafe
             var lines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();
-
+            listofOrder = new List<Beverages>();
             for (int i = 0; i < lines.Length; i++)
             {
                 var line = lines[i].Split(',');
@@ -94,6 +98,25 @@ namespace cafe
                                  ).ToList();
 
             ListViewProperty.ItemsSource = newChocoFilterList;
+        }
+
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoginPage page = new LoginPage();
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var name = ((Button) sender).Tag;
+
+            Beverages drink = (from d in listOfDrinks
+                         where d.Name.Equals(name)
+                         select d
+                         ).First();
+
+            listofOrder.Add(drink);
         }
     }
 
