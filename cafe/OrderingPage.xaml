@@ -97,7 +97,7 @@
                         <ListView x:Name="ListViewOrderedDrinks" Margin="10,15,15,35" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Background="#FF030D22" BorderBrush="#FF030D22">
 
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
