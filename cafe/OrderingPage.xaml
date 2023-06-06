@@ -92,14 +92,19 @@
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   HorizontalContentAlignment="Center" 
                                   VerticalContentAlignment="Stretch" 
+                                  KeyDown="ListView_KeyDown"
                                   Background="White">
 
                             
 
                             <ListView.ItemTemplate>
-                                <DataTemplate>
+                                <DataTemplate >
                                     <StackPanel>
-                                        <Label FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="30" Content="{Binding Name}"/>
+                                        <Label FontFamily="Comic Sans MS" 
+                                               FontWeight="Bold" FontSize="30" 
+                                               Content="{Binding Name}" 
+                                                
+                                               />
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>

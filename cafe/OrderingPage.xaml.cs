@@ -26,6 +26,8 @@ namespace cafe
         List<Beverages> listOfDrinks;
 
         List<Beverages> listofOrder;
+
+        int counter = 0;
         public OrderingPage()
         {
             InitializeComponent();
@@ -116,8 +118,12 @@ namespace cafe
                          select d
                          ).First();
 
+            drink.location = counter;
+           
+
             listofOrder.Add(drink);
 
+            counter++;
 
             ListViewOrderedDrinks.ItemsSource = null;
             ListViewOrderedDrinks.ItemsSource = listofOrder;
@@ -128,6 +134,32 @@ namespace cafe
             listofOrder.Clear();
             ListViewOrderedDrinks.ItemsSource = null;
         }
+
+        private void ListView_KeyDown(object sender, KeyEventArgs e) 
+        {
+            if (e.Key != Key.Delete) return;
+
+            var abc = ListViewOrderedDrinks.SelectedItems;
+
+            if (abc.Count != 0)
+            {
+                foreach (var item in abc)
+                {
+                    Beverages itemToRemove = (Beverages)item;
+
+                    listofOrder.Remove(itemToRemove);
+
+                   
+                }
+
+                ListViewOrderedDrinks.ItemsSource = null;
+                ListViewOrderedDrinks.ItemsSource = listofOrder;
+            }
+            
+            
+           
+
+        }
     }
 
     public class Beverages 
@@ -136,5 +168,7 @@ namespace cafe
         public string URLLink { get; set; }
 
         public string DrinkType { get; set; }
+
+        public int location { get; set; }
     }
 }
