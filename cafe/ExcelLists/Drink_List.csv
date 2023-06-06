@@ -1,8 +1,28 @@
-Coffee 1,coffee.png,Coffee
-Tea 1,tea.png,Tea
-Tea 2,tea.png,Tea
-Tea 3,tea.png,Tea
-Tea 4,tea.png,Tea
-Chocolate 1,chocolateDrink.jpg,Choco
-Frapino 1,frapino.png,Cold
-Soda 1,softdrinkPlaceHold.png,Soft
+Flat White,coffee.png,Coffee,5,6,6.5
+Cappucino,coffee.png,Coffee,5,6,6.5
+Café Latte,coffee.png,Coffee,5.5,6.5,7
+Vanilla Latte,coffee.png,Coffee,6.5,7.5,8
+Caramel Latte,coffee.png,Coffee,6.5,7.5,8
+Long Black,coffee.png,Coffee,4,4.5,5
+Short Black,coffee.png,Coffee,4,,
+Americano,coffee.png,Coffee,4,4.5,5
+Macchiato,coffee.png,Coffee,4.5,,
+Piccolo Latte,coffee.png,Coffee,4.5,,
+Caramel Affogato,coffee.png,Coffee,7.5,,
+Hot Mocha,chocolateDrink.jpg,Choco,6,7,7.5
+Hot Chocloate,chocolateDrink.jpg,Choco,5.5,6,7
+White Hot Chocolate,chocolateDrink.jpg,Choco,6.5,7.5,8
+White Chocolate Mocha,chocolateDrink.jpg,Choco,6.8,7.8,8.5
+English Breakfast,tea.png,Tea,4.5,4.5,4.5
+Green Tea,tea.png,Tea,4.5,4.5,4.5
+Ginger Tea,tea.png,Tea,4.5,4.5,4.5
+Lemon Tea,tea.png,Tea,4.5,4.5,4.5
+Ice Coffee,frapino.png,Cold,,7,8
+Ice Chocolate,frapino.png,Cold,,7,8
+Ice Chocolate,frapino.png,Cold,,6,7
+Ice Latte,frapino.png,Cold,,7,8
+Coke,softdrinkPlaceHold.png,Soft,2.5,2.5,2.5
+Coke Zero,softdrinkPlaceHold.png,Soft,2.5,2.5,2.5
+L&P,softdrinkPlaceHold.png,Soft,2.5,2.5,2.5
+Fanta,softdrinkPlaceHold.png,Soft,2.5,2.5,2.5
+Sprite,softdrinkPlaceHold.png,Soft,2.5,2.5,2.5
