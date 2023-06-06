@@ -42,16 +42,21 @@
                         <Button x:Name="Soft_Drinks"  Margin="20,30"   FontSize="20"  Content="Soft Drinks" Width="160" Height="80" Background="#FF01A8FE" Click="Soft_Drinks_Click"/>
                         <Button x:Name="Coffee_Drinks"  Margin="20,30"  FontSize="20"   Content="Coffe Drinks" Width="160" Height="80" Background="#FFFF5F1F" Click="Coffee_Drinks_Click"/>
                         <Button x:Name="Tea_drinks"  Margin="20,30"  FontSize="20"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" />
+                        <Button x:Name="All"  Margin="20,30"  FontSize="20"  Content="All" Width="160" Height="80" Background="BlueViolet"/>
 
                     </StackPanel>
 
 
                     <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="31*"/>
+                            <ColumnDefinition Width="113*"/>
+                        </Grid.ColumnDefinitions>
 
-                        <ListView x:Name="ListViewProperty" Margin="10,49,20,-18.6" 
+                        <ListView x:Name="ListViewProperty" Margin="10,0,20,-18.6" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel HorizontalAlignment="Center"/>
@@ -95,7 +100,7 @@
                                   KeyDown="ListView_KeyDown"
                                   Background="White">
 
-                            
+
 
                             <ListView.ItemTemplate>
                                 <DataTemplate >
@@ -137,10 +142,12 @@
 
                         </ListView>-->
 
+
+
                     </Grid>
-                    
+
                     <Grid Grid.Row="1" Margin="0,735,0,0.4">
-                        <Button x:Name="Confirm"  Margin="10,10,15,10"  FontSize="20"   Content="Past Orders" Background="#FF0BD8E5"/>
+                        <Button x:Name="Confirm"  Margin="10,10,15,10"  FontSize="20" Height="80"  Content="Place Order" Background="#FF0BD8E5"/>
                     </Grid>
 
                 </Grid>
