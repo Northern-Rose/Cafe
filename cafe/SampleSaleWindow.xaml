@@ -1,0 +1,55 @@
+﻿<Window x:Class="cafe.SampleSaleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cafe"
+        mc:Ignorable="d"
+        WindowState="Maximized" ResizeMode="NoResize"
+        Title="SampleSaleWindow" Height="1080" Width="1920" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height =" auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="auto" Background="Gray">
+            <TextBlock Text="User login" 
+                        Margin="30,5,10,5"
+                       VerticalAlignment="Center" FontSize="30"/>
+            <Button Content="Log out" 
+                    Margin="30,5,10,5"
+                    VerticalAlignment="Center" Height="60" Width="150" FontSize="30" Click="Button_Click"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Background="green">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Background="MidnightBlue">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height =" auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="Choco_Drinks" Margin="20,30" FontSize="20" Content="Choco Drinks" Width="160" Height="80" Background="#FFE62882"/>
+                        <Button x:Name="Cold_Drinks"  Margin="20,30"  FontSize="20"   Content="Cold Drinks" Width="160" Height="80" Background="#FF0BD8E5"/>
+                        <Button x:Name="Soft_Drinks"  Margin="20,30"   FontSize="20"  Content="Soft Drinks" Width="160" Height="80" Background="#FF01A8FE"/>
+                        <Button x:Name="Coffee_Drinks"  Margin="20,30"  FontSize="20"   Content="Coffe Drinks" Width="160" Height="80" Background="#FFFF5F1F"/>
+                        <Button x:Name="Tea_drinks"  Margin="20,30"  FontSize="20"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" />
+
+                    </StackPanel>
+
+
+                </Grid>
+
+                
+
+          </Grid>
+        </Grid>
+    </Grid>
+</Window>

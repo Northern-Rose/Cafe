@@ -1,0 +1,109 @@
+﻿<Window x:Class="cafe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cafe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" Background="#FF030D22" MinWidth="1920" MinHeight="1080"
+        WindowState="Maximized" ResizeMode="NoResize"
+        >
+    <Grid>
+        <!--
+        
+           
+              
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A"/>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="131*" />
+            <RowDefinition Height="115*" />
+            <RowDefinition Height="804*" />
+        </Grid.RowDefinitions>
+
+        <Grid  Grid.Row="0" Margin="0,0,-0.4,0.2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2*" /> 
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" Fill="#FF0BD8E5" HorizontalAlignment="Stretch" Height="54" Stroke="Black" VerticalAlignment="Center" Margin="20,0" RadiusX="10" RadiusY="10"/>
+            <Button Grid.Column="1" Content="Log out" HorizontalAlignment="Left" Margin="0,0" VerticalAlignment="Center" Width="80" Height="54" Background="#FF0BD8E5" RenderTransformOrigin="1.645,0.506" Click="Button_Click_1"/>
+            <Image Grid.Column="2" HorizontalAlignment="Center" Height="100" Margin="10,10,0,0" VerticalAlignment="Center" Width="500" Source="images/Home Brew.png"/>
+        </Grid>
+
+        <Grid Margin="0,131,-0.4,0.4" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="459*" />
+                <ColumnDefinition Width="1454*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Choco_Drinks"  Grid.Column="0" Content="Choco Drinks" HorizontalAlignment="Left" Margin="290,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFE62882" Click="Choco_Drinks_Click"/>
+            <Button x:Name="Cold_Drinks"  Grid.Column="0" Content="Cold Drinks" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF0BD8E5" Click="Cold_Drinks_Click"/>
+            <Button x:Name="Soft_Drinks"  Grid.Column="0" Content="Soft Drinks" HorizontalAlignment="Left" Margin="380,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FF01A8FE" Grid.ColumnSpan="2" Click="Soft_Drinks_Click"/>
+            <Button  Grid.Column="1" Content="New Order" HorizontalAlignment="Left" Margin="8.8,0,0,0" VerticalAlignment="Top" Width="155" Height="80" Background="#FF39FF3C"/>
+            <Button  Grid.Column="1" Content="Past Orders" HorizontalAlignment="Left" Margin="173.8,0,0,0" VerticalAlignment="Top" Width="155" Height="80" Click="Button_Click" Background="#FFFF5F1F"/>
+            <Button x:Name="Coffee_Drinks"  Grid.Column="0" Content="Coffe Drinks" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFF5F1F" Click="Coffee_Click"/>
+            <Button x:Name="Tea_drinks"  Grid.Column="0" Content="Tea Drinks" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click"/>
+        </Grid>
+
+        <Grid  Grid.Row="2" Margin="0,5.6,-0.4,0.4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230*" />
+                <ColumnDefinition Width="727*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Background="MidnightBlue" Margin="0,0,1,0"/>
+
+            <Grid x:Name="coffeeImages" Background="MidnightBlue"  Grid.Column="0" Margin="0,0,1,0" Opacity="0">
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/coffee.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="115,10,0,0" VerticalAlignment="Top" Width="100" Source="images/coffee.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Source="images/coffee.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="images/coffee.png"/>
+                
+            </Grid>
+
+            <Grid x:Name="teaImmages" Grid.Column="0" Background="MidnightBlue"  Margin="0,0,1,0" Opacity="0">
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/tea.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="115,10,0,0" VerticalAlignment="Top" Width="100" Source="images/tea.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/tea.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Source="images/tea.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="images/tea.png"/>
+            </Grid>
+
+            <Grid x:Name="Cold_Drink_Immages" Grid.Column="0" Background="MidnightBlue"  Margin="0,0,1,10" Opacity="0">
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/frapino.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="115,10,0,0" VerticalAlignment="Top" Width="100" Source="images/frapino.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/frapino.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Source="images/frapino.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="images/frapino.png"/>
+            </Grid>
+
+            <Grid x:Name="chocolateDrinkImages" Grid.Column="0" Background="MidnightBlue"  Margin="0,0,1,10" Opacity="0">
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/chocolateDrink.jpg"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="115,10,0,0" VerticalAlignment="Top" Width="100" Source="images/chocolateDrink.jpg"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/chocolateDrink.jpg"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Source="images/chocolateDrink.jpg"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="images/chocolateDrink.jpg"/>
+            </Grid>
+
+            <Grid x:Name="softDrinkImages" Grid.Column="0" Background="MidnightBlue"  Margin="0,0,1,10" Opacity="0">
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/softdrinkPlaceHold.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="115,10,0,0" VerticalAlignment="Top" Width="100" Source="images/softdrinkPlaceHold.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="images/softdrinkPlaceHold.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="220,10,0,0" VerticalAlignment="Top" Width="100" Source="images/softdrinkPlaceHold.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="images/softdrinkPlaceHold.png"/>
+            </Grid>
+
+            <Grid  Grid.Column="1" Background="MidnightBlue" Margin="8,0,1111.6,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+            </Grid>
+            <!--<Rectangle Grid.Column="0" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Margin="20,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="442" StrokeThickness="0"/>
+            <Rectangle Grid.Column="1" Fill="MidnightBlue" HorizontalAlignment="Left" Height="558" Stroke="Black" VerticalAlignment="Top" Width="332" Margin="5.6,0,0,0"/>-->
+            <Button Grid.Column="1" Content="Submit order" HorizontalAlignment="Left" Margin="10,718,0,0" VerticalAlignment="Top" Width="334" Height="80" Click="Button_Click" Background="#FF0BD8E5" BorderThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" BorderBrush="#FF00FF96"/>
+        </Grid>
+    </Grid>
+</Window>

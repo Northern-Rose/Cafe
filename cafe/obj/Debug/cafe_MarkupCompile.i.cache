@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\270235677\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\App.xaml
-3-374399553
+5-22529768
 
-8-2045362597
+10-565347389
 13-1505183044
-LoginPage.xaml;OrderingPage.xaml;WindowLogin.xaml;
+LoginPage.xaml;MainWindow.xaml;OrderingPage.xaml;SampleSaleWindow.xaml;WindowLogin.xaml;
 
-False
+True
 
