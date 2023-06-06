@@ -24,7 +24,6 @@ namespace cafe
     public partial class OrderingPage : Page
     {
         List<Beverages> listOfDrinks;
-
         List<Beverages> listofOrder;
 
         int counter = 0;
@@ -47,10 +46,8 @@ namespace cafe
                     DrinkType = line[2]
                 });
             }
-
             ListViewProperty.ItemsSource = listOfDrinks;
         }
-
 
         private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
         {
@@ -147,18 +144,11 @@ namespace cafe
                 {
                     Beverages itemToRemove = (Beverages)item;
 
-                    listofOrder.Remove(itemToRemove);
-
-                   
+                    listofOrder.Remove(itemToRemove); 
                 }
-
                 ListViewOrderedDrinks.ItemsSource = null;
                 ListViewOrderedDrinks.ItemsSource = listofOrder;
             }
-            
-            
-           
-
         }
     }
 
@@ -166,9 +156,7 @@ namespace cafe
     {
         public string Name { get; set; }
         public string URLLink { get; set; }
-
         public string DrinkType { get; set; }
-
         public int location { get; set; }
     }
 }
