@@ -148,17 +148,11 @@ namespace cafe
                     Beverages itemToRemove = (Beverages)item;
 
                     listofOrder.Remove(itemToRemove);
-
-                   
                 }
 
                 ListViewOrderedDrinks.ItemsSource = null;
                 ListViewOrderedDrinks.ItemsSource = listofOrder;
             }
-            
-            
-           
-
         }
     }
 
@@ -166,9 +160,9 @@ namespace cafe
     {
         public string Name { get; set; }
         public string URLLink { get; set; }
-
         public string DrinkType { get; set; }
-
+        public string DrinkCost { get; set; }
         public int location { get; set; }
+
     }
 }
