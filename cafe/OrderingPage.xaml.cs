@@ -52,7 +52,7 @@ namespace cafe
 
             ListViewProperty.ItemsSource = listOfDrinks;
 
-            var DrinkSizes = File.ReadAllLines(@"../../ExcelLists/Size_Types.csv");
+            var DrinkSizes = File.ReadAllLines(@"../../ExcelLists/Size_Type.csv");
             listOfDrinkSizes = new List<SizesOFCups>();
             for (int i = 0; i < DrinkSizes.Length; i++)
             {
