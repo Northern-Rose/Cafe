@@ -66,7 +66,6 @@ namespace cafe
                 });
             }
 
-
             var drinkInfomation = File.ReadAllLines(@"../../ExcelLists/Drink_Size_Relationship.csv");
             listOfDrinkInfo = new List<CupInfo>();
             for (int i = 0; i < drinkInfomation.Length; i++)
@@ -74,7 +73,7 @@ namespace cafe
                 var line = drinkInfomation[i].Split(',');
                 listOfDrinkInfo.Add(new CupInfo
                 {
-                   CupInfoID = line[0],
+                    CupInfoID = line[0],
                     CupInfoSize = line[1],
                     CupInfoPrize = line[2],
                 });
@@ -83,50 +82,35 @@ namespace cafe
 
         private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
         {
-            var newCoffeeFilterList = (from d in listOfDrinks
-                                 where d.DrinkType == "Coffee"
-                                 select d
-                                 ).ToList();
+            var newCoffeeFilterList = (from d in listOfDrinks where d.DrinkType == "Coffee" select d).ToList();
 
             ListViewProperty.ItemsSource = newCoffeeFilterList;
         }
 
         private void Tea_drinks_Click(object sender, RoutedEventArgs e)
         {
-            var newTeaFilterList = (from d in listOfDrinks
-                                where d.DrinkType == "Tea"
-                                select d
-                                 ).ToList();
+            var newTeaFilterList = (from d in listOfDrinks where d.DrinkType == "Tea"  select d).ToList();
 
             ListViewProperty.ItemsSource = newTeaFilterList;
         }
 
         private void Soft_Drinks_Click(object sender, RoutedEventArgs e)
         {
-            var newSoftFilterList = (from d in listOfDrinks
-                                    where d.DrinkType == "Soft"
-                                    select d
-                                 ).ToList();
+            var newSoftFilterList = (from d in listOfDrinks where d.DrinkType == "Soft" select d).ToList();
 
             ListViewProperty.ItemsSource = newSoftFilterList;
         }
 
         private void Cold_Drinks_Click(object sender, RoutedEventArgs e)
         {
-            var newColdFilterList = (from d in listOfDrinks
-                                    where d.DrinkType == "Cold"
-                                    select d
-                                 ).ToList();
+            var newColdFilterList = (from d in listOfDrinks where d.DrinkType == "Cold" select d).ToList();
 
             ListViewProperty.ItemsSource = newColdFilterList;
         }
 
         private void Choco_Drinks_Click(object sender, RoutedEventArgs e)
         {
-            var newChocoFilterList = (from d in listOfDrinks
-                                    where d.DrinkType == "Choco"
-                                      select d
-                                 ).ToList();
+            var newChocoFilterList = (from d in listOfDrinks where d.DrinkType == "Choco" select d).ToList();
 
             ListViewProperty.ItemsSource = newChocoFilterList;
         }
@@ -142,14 +126,10 @@ namespace cafe
         {
             var name = ((Button) sender).Tag;
 
-            Beverages drink = (from d in listOfDrinks
-                         where d.Name.Equals(name)
-                         select d
-                         ).First();
+            Beverages drink = (from d in listOfDrinks where d.Name.Equals(name) select d).First();
 
             drink.location = counter;
            
-
             listofOrder.Add(drink);
 
             counter++;
@@ -166,9 +146,7 @@ namespace cafe
 
         private void All_Drinks_Click(object sender, RoutedEventArgs e)
         {
-            var newAllDrinkFilterList = (from d in listOfDrinks
-                                         select d
-                                ).ToList();
+            var newAllDrinkFilterList = (from d in listOfDrinks select d).ToList();
 
             ListViewProperty.ItemsSource = newAllDrinkFilterList;
         }
