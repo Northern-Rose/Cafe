@@ -29,6 +29,8 @@ namespace cafe
 
         List<SizesOFCups> listOfDrinkSizes;
 
+        List<CupInfo> listOfDrinkInfo;
+
         int counter = 0;
         public OrderingPage()
         {
@@ -61,6 +63,20 @@ namespace cafe
                 {
                     sizeID = line[0],
                     CupSize = line[1],
+                });
+            }
+
+
+            var drinkInfomation = File.ReadAllLines(@"../../ExcelLists/Drink_Size_Relationship.csv");
+            listOfDrinkInfo = new List<CupInfo>();
+            for (int i = 0; i < drinkInfomation.Length; i++)
+            {
+                var line = drinkInfomation[i].Split(',');
+                listOfDrinkInfo.Add(new CupInfo
+                {
+                   CupInfoID = line[0],
+                    CupInfoSize = line[1],
+                    CupInfoPrize = line[2],
                 });
             }
         }
@@ -191,6 +207,13 @@ namespace cafe
     {
         public string sizeID { get; set; }
         public string CupSize { get; set; }
+    }
+
+    public class CupInfo
+    {
+        public string CupInfoID { get; set; }
+        public string CupInfoSize { get; set; }
+        public string CupInfoPrize { get; set; }
     }
 
 }
