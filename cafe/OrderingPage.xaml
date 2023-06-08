@@ -48,11 +48,6 @@
 
 
                     <Grid Grid.Row="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="31*"/>
-                            <ColumnDefinition Width="113*"/>
-                        </Grid.ColumnDefinitions>
-
                         <ListView x:Name="ListViewProperty" Margin="10,0,20,10.4" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
@@ -91,9 +86,9 @@
                         <Button x:Name="Past_Orders"  Margin="20,30"  FontSize="20"   Content="Past Orders" Width="160" Height="80" Background="#FF0BD8E5"/>
                     </StackPanel>
 
-                    <Grid Grid.Row="1" Margin="0,0,0,135.4">
+                    <Grid Grid.Row="1" Margin="0,0,0,133">
                         <ListView x:Name="ListViewOrderedDrinks" 
-                                  Margin="10,15,15,35" 
+                                  Margin="10,0,10,0" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   HorizontalContentAlignment="Center" 
                                   VerticalContentAlignment="Stretch" 
@@ -146,8 +141,8 @@
 
                     </Grid>
 
-                    <Grid Grid.Row="1" Margin="0,735,0,0.4">
-                        <Button x:Name="Confirm"  Margin="10,10,15,10"  FontSize="20" Height="80"  Content="Place Order" Background="#FF0BD8E5"/>
+                    <Grid Grid.Row="2" Margin="0,785,0,0">
+                        <Button x:Name="Confirm"  Margin="10,10,10,10"  FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
                     </Grid>
 
                 </Grid>
