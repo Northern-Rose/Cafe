@@ -31,6 +31,5 @@ namespace cafe
             WindowLogin window = (WindowLogin)Application.Current.MainWindow;
             window.Content = page;
         }
-
     }
 }

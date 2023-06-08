@@ -42,7 +42,7 @@
                         <Button x:Name="Soft_Drinks"  Margin="20,30"   FontSize="20"  Content="Soft Drinks" Width="160" Height="80" Background="#FF01A8FE" Click="Soft_Drinks_Click"/>
                         <Button x:Name="Coffee_Drinks"  Margin="20,30"  FontSize="20"   Content="Coffe Drinks" Width="160" Height="80" Background="#FFFF5F1F" Click="Coffee_Drinks_Click"/>
                         <Button x:Name="Tea_drinks"  Margin="20,30"  FontSize="20"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" />
-                        <Button x:Name="All"  Margin="20,30"  FontSize="20"  Content="All" Width="160" Height="80" Background="BlueViolet"/>
+                        <Button x:Name="All_Drinks"  Margin="20,30"  FontSize="20"  Content="All" Width="160" Height="80" Background="BlueViolet" Click="All_Drinks_Click"/>
 
                     </StackPanel>
 

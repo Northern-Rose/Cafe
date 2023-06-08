@@ -27,30 +27,43 @@ namespace cafe
 
         List<Beverages> listofOrder;
 
+        List<SizesOFCups> listOfDrinkSizes;
+
         int counter = 0;
         public OrderingPage()
         {
             InitializeComponent();
 
-            var lines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
+            var TypesOfDrinklines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();
             listofOrder = new List<Beverages>();
-            for (int i = 0; i < lines.Length; i++)
+            for (int i = 0; i < TypesOfDrinklines.Length; i++)
             {
-                var line = lines[i].Split(',');
+                var line = TypesOfDrinklines[i].Split(',');
 
                 listOfDrinks.Add(new Beverages
                 {
                     Name = line[0],
                     URLLink = "/images/" + line[1],
-                    DrinkType = line[2]
+                    DrinkType = line[2],
                 });
             }
 
             ListViewProperty.ItemsSource = listOfDrinks;
-        }
 
+            var DrinkSizes = File.ReadAllLines(@"../../ExcelLists/Size_Types.csv");
+            listOfDrinkSizes = new List<SizesOFCups>();
+            for (int i = 0; i < DrinkSizes.Length; i++)
+            {
+                var line = DrinkSizes[i].Split(',');
+                listOfDrinkSizes.Add(new SizesOFCups
+                {
+                    sizeID = line[0],
+                    CupSize = line[1],
+                });
+            }
+        }
 
         private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
         {
@@ -135,6 +148,15 @@ namespace cafe
             ListViewOrderedDrinks.ItemsSource = null;
         }
 
+        private void All_Drinks_Click(object sender, RoutedEventArgs e)
+        {
+            var newAllDrinkFilterList = (from d in listOfDrinks
+                                         select d
+                                ).ToList();
+
+            ListViewProperty.ItemsSource = newAllDrinkFilterList;
+        }
+
         private void ListView_KeyDown(object sender, KeyEventArgs e) 
         {
             if (e.Key != Key.Delete) return;
@@ -163,6 +185,12 @@ namespace cafe
         public string DrinkType { get; set; }
         public string DrinkCost { get; set; }
         public int location { get; set; }
-
     }
+
+    public class SizesOFCups 
+    {
+        public string sizeID { get; set; }
+        public string CupSize { get; set; }
+    }
+
 }

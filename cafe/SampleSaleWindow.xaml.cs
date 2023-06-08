@@ -23,13 +23,5 @@ namespace cafe
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            WindowLogin mw = new WindowLogin();
-            mw.Show();
-            this.Close();
-
-        }
     }
 }
