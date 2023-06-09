@@ -72,17 +72,13 @@
                             </ListView.ItemTemplate>
                         </ListView>
 
-                        <Popup Name="ThreeSizePopup" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200" IsOpen="False">
-                            <TextBlock Name="McTextBlock" Background="LightBlue"> This is popup text</TextBlock>
-                        </Popup>
                         
-                        <!--<Popup Margin="10,10,0,13" Name="OneSizePopup" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="200" IsOpen="False">
-                            <TextBlock Name="McTextBlock" Background="LightBlue"> This is popup text</TextBlock>
-                        </Popup>-->
                     </Grid>
                 </Grid>
 
-
+                <Popup Margin="10,10,0,13" Placement="Center" Name="ThreeSizePopup" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="400" IsOpen="false">
+                    <TextBlock Name="McTextBlock" Background="LightBlue"> This is popup text</TextBlock>
+                </Popup>
 
                 <Grid Grid.Column="1" Background="#FF030D22">
                     <Grid.RowDefinitions>
