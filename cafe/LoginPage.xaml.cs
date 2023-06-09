@@ -31,5 +31,12 @@ namespace cafe
             WindowLogin window = (WindowLogin)Application.Current.MainWindow;
             window.Content = page;
         }
+
+        private void Button_Click_Admin(object sender, RoutedEventArgs e)
+        {
+            adminHomePage page = new adminHomePage();
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page;
+        }
     }
 }

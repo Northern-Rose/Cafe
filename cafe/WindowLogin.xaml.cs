@@ -23,6 +23,7 @@ namespace cafe
         {
             InitializeComponent();
             LoginPage page = new LoginPage();
+
             currentDisplayPage = page;
 
             this.DataContext = this;

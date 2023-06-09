@@ -1,4 +1,4 @@
-﻿<Page x:Class="cafe.LoginPage"
+﻿<Page x:Class="cafe.LoginPage" Background="MidnightBlue"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,8 +14,9 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click" Margin="0,0,0,4" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
-      
+        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click" Margin="322,165,322,226.6" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
+        <Button Content="Admin login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click_Admin" Margin="322,228,322,163.6" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
+
 
     </Grid>
 </Page>

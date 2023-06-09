@@ -61,3 +61,5 @@ C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\OrderingPage.g.cs
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\LoginPage.baml
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\OrderingPage.baml
+C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\adminHomePage.g.cs
+C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\adminHomePage.baml
