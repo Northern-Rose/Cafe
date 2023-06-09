@@ -128,6 +128,25 @@ namespace cafe
 
             Beverages drink = (from d in listOfDrinks where d.Name.Equals(name) select d).First();
 
+            ThreeSizePopup.IsOpen = true;
+            //string msgtext = "Choose size";
+            //string txt = "Size of drink";
+            //MessageBoxButton button = MessageBoxButton.YesNoCancel;
+            //MessageBoxResult result = MessageBox.Show(msgtext, txt, button);
+
+            //switch (result)
+            //{
+            //    case MessageBoxResult.Yes:
+            //        textBox1.Text = "Yes";
+            //        break;
+            //    case MessageBoxResult.No:
+            //        textBox1.Text = "No";
+            //        break;
+            //    case MessageBoxResult.Cancel:
+            //        textBox1.Text = "Cancel";
+            //        break;
+            //}
+
             drink.location = counter;
            
             listofOrder.Add(drink);
