@@ -29,10 +29,7 @@
                     <ColumnDefinition Width ="3*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left"
-                       VerticalAlignment="Top" 
-                       Grid.ColumnSpan="2"
-                       Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.5" Stretch="Fill"/>
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.5" Stretch="Fill"/>
                 <Grid Grid.Column="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height =" auto"/>
@@ -46,15 +43,15 @@
                         <Button x:Name="Coffee_Drinks"  Margin="20,30"  FontSize="20"   Content="Coffe Drinks" Width="160" Height="80" Background="#FFFF5F1F" Click="Coffee_Drinks_Click"/>
                         <Button x:Name="Tea_drinks"  Margin="20,30"  FontSize="20"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" />
                         <Button x:Name="All_Drinks"  Margin="20,30"  FontSize="20"  Content="All" Width="160" Height="80" Background="BlueViolet" Click="All_Drinks_Click"/>
-
                     </StackPanel>
-
 
                     <Grid Grid.Row="1">
                         <ListView x:Name="ListViewProperty" Margin="10,0,20,10.4" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2" Opacity="0.485">
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel HorizontalAlignment="Center"/>
@@ -64,7 +61,7 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Button Width="240" Click="Button_Click" Tag="{Binding Name}">
-                                        <StackPanel>
+                                        <StackPanel Opacity="100">
                                             <Image Source="{Binding URLLink}" />
                                             <Label FontSize="18"
                                                 VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -74,8 +71,6 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-
-                        
                     </Grid>
                 </Grid>
 
@@ -102,56 +97,19 @@
                                   KeyDown="ListView_KeyDown"
                                   Background="White">
 
-
-
                             <ListView.ItemTemplate>
                                 <DataTemplate >
                                     <StackPanel>
-                                        <Label FontFamily="Comic Sans MS" 
-                                               FontWeight="Bold" FontSize="30" 
-                                               Content="{Binding Name}" 
-                                                
-                                               />
+                                        <Label FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="30" Content="{Binding Name}" />
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
-
-
                         </ListView>
-                        <!--<ListView x:Name="ListViewOrderedDrinks" 
-                                  Margin="10,15,15,35" 
-                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" 
-                                  Background="#FF030D22" BorderBrush="#FF030D22">
-
-                            <ListView.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <WrapPanel HorizontalAlignment="Center"/>
-                                </ItemsPanelTemplate>
-                            </ListView.ItemsPanel>
-
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
-
-                                        <Image Source="{Binding Name}" />
-
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-
-
-                        </ListView>-->
-
-
-
                     </Grid>
 
                     <Grid Grid.Row="2" Margin="0,785,0,0">
                         <Button x:Name="Confirm"  Margin="10,10,10,10"  FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
                     </Grid>
-
                 </Grid>
             </Grid>
         </Grid>
