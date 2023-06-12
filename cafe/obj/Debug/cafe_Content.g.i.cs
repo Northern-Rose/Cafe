@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("softdrinkplacehold.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cyberpunk_106.2.jpg")]
 
 

@@ -162,5 +162,9 @@
   <ItemGroup>
     <Resource Include="images\softdrinkPlaceHold.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1_RevtZAaAgh_CGLUj0BH3HQ_auto_x2-transformed.jpeg" />
+    <Resource Include="images\Cyberpunk_106_2_auto_x2-transformed.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

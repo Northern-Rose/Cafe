@@ -10,12 +10,37 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition  Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click" Margin="322,165,322,226.6" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
-        <Button Content="Admin login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="58" Click="Button_Click_Admin" Margin="322,228,322,163.6" Grid.Column="1" Background="#FF3FFFD2" FontSize="20"/>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.ColumnSpan="3" 
+               Grid.RowSpan="2"
+               HorizontalAlignment="Left"  
+               VerticalAlignment="Top" 
+               Source="images/1_RevtZAaAgh_CGLUj0BH3HQ_auto_x2-transformed.jpeg" Opacity="0.5" Stretch="Fill"/>
+        
+        
+        
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" 
+                   TextWrapping="Wrap" Text="HomeBrew" 
+                   VerticalAlignment="Center" FontSize="36"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Button Content="Login" HorizontalAlignment="Center" 
+                VerticalAlignment="Center" Width="156" Height="58" 
+                Click="Button_Click" 
+                Grid.Column="1" Background="#FFFE019A" FontSize="20" Opacity="0.75"/>
+            <Button Content="Admin login" HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" Width="156" Height="58" 
+                    Click="Button_Click_Admin" 
+                    Grid.Column="1" Background="#FFFE019A" FontSize="20" Opacity="0.75"/>
+        </StackPanel>
 
 
     </Grid>
