@@ -32,8 +32,8 @@
         </Grid>
 
         <Grid>
-        <StackPanel Orientation="Horizontal"  Height="auto" Background="Gray">
-            <Button Content="STAFF VIEW" FontSize="20" Margin="10,10,10,10" Height="40" Width="120"/>
+        <StackPanel Orientation="Horizontal"  Height="300" Background="Gray">
+           
         </StackPanel>
         </Grid>
 
