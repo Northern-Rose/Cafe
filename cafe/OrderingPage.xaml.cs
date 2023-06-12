@@ -189,6 +189,11 @@ namespace cafe
                 ListViewOrderedDrinks.ItemsSource = listofOrder;
             }
         }
+
+        private void ClosePopUp_Click(object sender, RoutedEventArgs e)
+        {
+            ThreeSizePopup.IsOpen = false;
+        }
     }
 
     public class Beverages 
