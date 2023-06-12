@@ -46,9 +46,10 @@ namespace cafe
 
                 listOfDrinks.Add(new Beverages
                 {
-                    Name = line[0],
-                    URLLink = "/images/" + line[1],
-                    DrinkType = line[2],
+                    Id = Int32.Parse(line[0]),
+                    Name = line[1],
+                    URLLink = "/images/" + line[2],
+                    DrinkType = line[3],
                 });
             }
 
@@ -61,7 +62,7 @@ namespace cafe
                 var line = DrinkSizes[i].Split(',');
                 listOfDrinkSizes.Add(new SizesOFCups
                 {
-                    sizeID = line[0],
+                    sizeID = Int32.Parse( line[0]),
                     CupSize = line[1],
                 });
             }
@@ -73,9 +74,9 @@ namespace cafe
                 var line = drinkInfomation[i].Split(',');
                 listOfDrinkInfo.Add(new CupInfo
                 {
-                    CupInfoID = line[0],
-                    CupInfoSize = line[1],
-                    CupInfoPrize = line[2],
+                    CupInfoID = Int32.Parse( line[0]),
+                    CupInfoSize = Int32.Parse( line[1]),
+                    CupInfoPrize = Double.Parse( line[2]),
                 });
             }
         }
@@ -128,27 +129,29 @@ namespace cafe
 
             Beverages drink = (from d in listOfDrinks where d.Name.Equals(name) select d).First();
 
-            ThreeSizePopup.IsOpen = true;
-            //string msgtext = "Choose size";
-            //string txt = "Size of drink";
-            //MessageBoxButton button = MessageBoxButton.YesNoCancel;
-            //MessageBoxResult result = MessageBox.Show(msgtext, txt, button);
+            
 
-            //switch (result)
-            //{
-            //    case MessageBoxResult.Yes:
-            //        textBox1.Text = "Yes";
-            //        break;
-            //    case MessageBoxResult.No:
-            //        textBox1.Text = "No";
-            //        break;
-            //    case MessageBoxResult.Cancel:
-            //        textBox1.Text = "Cancel";
-            //        break;
-            //}
+            var abc = (from df in listOfDrinkInfo
+                       join ds in listOfDrinkSizes
+                       on df.CupInfoSize equals ds.sizeID
+                       where df.CupInfoID == drink.Id
+                       select new
+                       {
+                           Size = ds.CupSize,
+                           Price = df.CupInfoPrize
+                       }
+                       ).ToList();
+
+            if (abc.Count == 3)
+            {
+                ThreeSizePopup.IsOpen = true;
+
+            }
+
 
             drink.location = counter;
            
+
             listofOrder.Add(drink);
 
             counter++;
@@ -198,6 +201,7 @@ namespace cafe
 
     public class Beverages 
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string URLLink { get; set; }
         public string DrinkType { get; set; }
@@ -207,15 +211,15 @@ namespace cafe
 
     public class SizesOFCups 
     {
-        public string sizeID { get; set; }
+        public int sizeID { get; set; }
         public string CupSize { get; set; }
     }
 
     public class CupInfo
     {
-        public string CupInfoID { get; set; }
-        public string CupInfoSize { get; set; }
-        public string CupInfoPrize { get; set; }
+        public int CupInfoID { get; set; }
+        public int CupInfoSize { get; set; }
+        public double CupInfoPrize { get; set; }
     }
 
 }
