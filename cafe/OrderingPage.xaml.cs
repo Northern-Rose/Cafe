@@ -129,8 +129,6 @@ namespace cafe
 
             Beverages drink = (from d in listOfDrinks where d.Name.Equals(name) select d).First();
 
-            
-
             var abc = (from df in listOfDrinkInfo
                        join ds in listOfDrinkSizes
                        on df.CupInfoSize equals ds.sizeID
@@ -145,13 +143,14 @@ namespace cafe
             if (abc.Count == 3)
             {
                 ThreeSizePopup.IsOpen = true;
-
             }
-
+            else if (abc.Count == 2)
+            {
+                TwoSizePopUp.IsOpen = true;
+            }
 
             drink.location = counter;
            
-
             listofOrder.Add(drink);
 
             counter++;
@@ -196,6 +195,7 @@ namespace cafe
         private void ClosePopUp_Click(object sender, RoutedEventArgs e)
         {
             ThreeSizePopup.IsOpen = false;
+            TwoSizePopUp.IsOpen = false;
         }
     }
 
