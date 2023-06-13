@@ -82,7 +82,7 @@ namespace cafe
                 });
             }
 
-
+            
         }
 
         private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
@@ -127,6 +127,7 @@ namespace cafe
             window.Content = page;
         }
 
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var name = ((Button) sender).Tag;
@@ -140,10 +141,12 @@ namespace cafe
                        select new
                        {
                            Size = ds.CupSize,
-                           Price = df.CupInfoPrize
+                           Price = df.CupInfoPrize,
+                           Display = ds.CupSize + " $" + df.CupInfoPrize
                        }
                        ).ToList();
 
+            PopupContent.ItemsSource = abc;
             if (abc.Count == 3)
             {
                 ThreeSizePopup.IsOpen = true;
