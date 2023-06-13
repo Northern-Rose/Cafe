@@ -75,8 +75,7 @@
                 </Grid>
 
                 <Popup Margin="10,10,0,13" Placement="Center" Name="ThreeSizePopup" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="400" IsOpen="false">
-                    <Grid Background="Transparent">
-                        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="400" Stroke="Black" VerticalAlignment="Top" Width="400" RadiusY="81.233" RadiusX="81.233"/>
+                    <Grid Background="DarkBlue">
                         <Button Margin="43,195,305,150">
                             <Label Content="S" FontSize="20"/>
                         </Button>
