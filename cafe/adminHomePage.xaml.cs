@@ -31,5 +31,17 @@ namespace cafe
             WindowLogin window = (WindowLogin)Application.Current.MainWindow;
             window.Content = page;
         }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                txtSearchPlaceholder.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                txtSearchPlaceholder.Visibility = Visibility.Visible;
+            }
+        }
     }
 }

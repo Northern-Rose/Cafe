@@ -67,6 +67,8 @@ namespace cafe
                 });
             }
 
+            
+
             var drinkInfomation = File.ReadAllLines(@"../../ExcelLists/Drink_Size_Relationship.csv");
             listOfDrinkInfo = new List<CupInfo>();
             for (int i = 0; i < drinkInfomation.Length; i++)
@@ -79,6 +81,8 @@ namespace cafe
                     CupInfoPrize = Double.Parse( line[2]),
                 });
             }
+
+
         }
 
         private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
