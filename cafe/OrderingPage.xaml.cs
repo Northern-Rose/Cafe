@@ -138,11 +138,12 @@ namespace cafe
                        join ds in listOfDrinkSizes
                        on df.CupInfoSize equals ds.sizeID
                        where df.CupInfoID == drink.Id
-                       select new
+                       select new PriceInfo
                        {
                            Size = ds.CupSize,
                            Price = df.CupInfoPrize,
-                           Display = ds.CupSize + " $" + df.CupInfoPrize
+                           Display = ds.CupSize + " $" + df.CupInfoPrize,
+                           DrinkName = drink.Name
                        }
                        ).ToList();
 
@@ -155,15 +156,35 @@ namespace cafe
             {
                 TwoSizePopUp.IsOpen = true;
             }
+            else 
+            {
+                drink.location = counter;
 
-            drink.location = counter;
-           
-            listofOrder.Add(drink);
+                listofOrder.Add(drink);
 
-            counter++;
+                counter++;
 
-            ListViewOrderedDrinks.ItemsSource = null;
-            ListViewOrderedDrinks.ItemsSource = listofOrder;
+                ListViewOrderedDrinks.ItemsSource = null;
+                ListViewOrderedDrinks.ItemsSource = listofOrder;
+            }
+
+            
+        }
+
+        private void ThreePopUp_Click(object sender, RoutedEventArgs e) 
+        {
+            var priceInfo = (PriceInfo)(((Button)sender).Tag);
+
+            
+
+            //drink.location = counter;
+
+            //listofOrder.Add();
+
+            //counter++;
+
+            //ListViewOrderedDrinks.ItemsSource = null;
+            //ListViewOrderedDrinks.ItemsSource = listofOrder;
         }
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
@@ -204,6 +225,7 @@ namespace cafe
             ThreeSizePopup.IsOpen = false;
             TwoSizePopUp.IsOpen = false;
         }
+
     }
 
     public class Beverages 
@@ -229,4 +251,12 @@ namespace cafe
         public double CupInfoPrize { get; set; }
     }
 
+    public class PriceInfo
+    {
+        public string Size { get; set; }
+        public double Price { get; set; }
+        public string Display { get; set; }
+
+        public string DrinkName { get; set; }
+    }
 }

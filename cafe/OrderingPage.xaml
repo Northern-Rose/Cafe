@@ -80,7 +80,7 @@
 
                     <Grid Background="Wheat">
 
-                        <ListView x:Name="PopupContent">
+                        <ListView x:Name="PopupContent" >
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel HorizontalAlignment="Center"/>
@@ -89,26 +89,16 @@
 
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Button Width="100"  Height="40" Click="Button_Click" Content="{Binding Display}"/>
+                                    <Button Width="100"  Height="40" 
+                                            Click="ThreePopUp_Click" 
+                                            Tag="{Binding}"
+                                            Content="{Binding Display}"/>
 
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                        <Button x:Name="ClosePopUp" Margin="360,0,0,360" Background="#FFD1D1D1" Click="ClosePopUp_Click"/>
-
+                        <Button x:Name="ClosePopUp" Content="X" Margin="360,0,0,360" Background="#FFD1D1D1" Click="ClosePopUp_Click"/>
                     </Grid>
-                    <!--<Grid Background="DarkBlue">
-                        <Button Margin="10,195,296,150">
-                            <Label Content="S" FontSize="20"/>
-                        </Button>
-                        <Button Margin="139,195,155,150">
-                            <Label Content="M" FontSize="20"/>
-                        </Button>
-                        <Button Margin="278,195,10,150">
-                            <Label Content="L" FontSize="20"/>
-                        </Button>
-                        <Button x:Name="ClosePopUp" Margin="360,0,0,360" Background="#FFD1D1D1" Click="ClosePopUp_Click"/>
-                    </Grid>-->
                 </Popup>
 
                 <Popup Margin="10,10,0,13" Placement="Center" Name="TwoSizePopUp" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="400" IsOpen="false">
