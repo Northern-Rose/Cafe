@@ -16,11 +16,6 @@ using System.Windows.Shapes;
 
 namespace cafe
 {
-    /// <summary>
-    /// Interaction logic for OrderingPage.xaml
-    /// </summary>
-    /// 
-
     public partial class OrderingPage : Page
     {
         List<Beverages> listOfDrinks;
@@ -67,8 +62,6 @@ namespace cafe
                 });
             }
 
-            
-
             var drinkInfomation = File.ReadAllLines(@"../../ExcelLists/Drink_Size_Relationship.csv");
             listOfDrinkInfo = new List<CupInfo>();
             for (int i = 0; i < drinkInfomation.Length; i++)
@@ -81,8 +74,6 @@ namespace cafe
                     CupInfoPrize = Double.Parse( line[2]),
                 });
             }
-
-
         }
 
         private void Coffee_Drinks_Click(object sender, RoutedEventArgs e)
@@ -158,7 +149,6 @@ namespace cafe
             }
             else 
             {
-                abc[0].FinalDrink.Replace("One Size ", "");
                 abc[0].location = counter;
 
                 listofOrder.Add(abc[0]);
@@ -168,8 +158,6 @@ namespace cafe
                 ListViewOrderedDrinks.ItemsSource = null;
                 ListViewOrderedDrinks.ItemsSource = listofOrder;
             }
-
-            
         }
 
         private void ThreePopUp_Click(object sender, RoutedEventArgs e) 
@@ -186,6 +174,8 @@ namespace cafe
 
             ListViewOrderedDrinks.ItemsSource = null;
             ListViewOrderedDrinks.ItemsSource = listofOrder;
+
+            ThreeSizePopup.IsOpen = false;
         }
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
