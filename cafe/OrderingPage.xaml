@@ -76,11 +76,11 @@
 
                 <Popup Margin="10,10,0,13" Placement="Center" 
                        Name="ThreeSizePopup" HorizontalAlignment="Left" 
-                       VerticalAlignment="Top" Width="400" Height="400" IsOpen="false">
+                       VerticalAlignment="Top" Width="400" Height="200" IsOpen="false">
 
-                    <Grid Background="Wheat">
+                    <Grid>
 
-                        <ListView x:Name="PopupContent" >
+                        <ListView x:Name="PopupContent" Background="DarkBlue">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel HorizontalAlignment="Center"/>
@@ -89,7 +89,7 @@
 
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Button Width="100"  Height="40" 
+                                    <Button Margin="0,100,0,0" Background="LightBlue" Width="117"  Height="80" 
                                             Click="ThreePopUp_Click" 
                                             Tag="{Binding}"
                                             Content="{Binding Display}"/>
@@ -97,7 +97,7 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                        <Button x:Name="ClosePopUp" Content="X" Margin="360,0,0,360" Background="#FFD1D1D1" Click="ClosePopUp_Click"/>
+                        <Button x:Name="ClosePopUp" Content="X" Margin="360,0,0,160" Background="#FFD1D1D1" Click="ClosePopUp_Click"/>
                     </Grid>
                 </Popup>
 
