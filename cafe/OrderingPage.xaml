@@ -135,7 +135,7 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate >
                                     <StackPanel>
-                                        <Label FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="30" Content="{Binding Name}" />
+                                        <Label FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="30" Content="{Binding FinalDrink}" />
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>

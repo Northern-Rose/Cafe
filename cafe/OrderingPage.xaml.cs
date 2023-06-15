@@ -25,7 +25,7 @@ namespace cafe
     {
         List<Beverages> listOfDrinks;
 
-        List<Beverages> listofOrder;
+        List<PriceInfo> listofOrder;
 
         List<SizesOFCups> listOfDrinkSizes;
 
@@ -39,7 +39,7 @@ namespace cafe
             var TypesOfDrinklines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();
-            listofOrder = new List<Beverages>();
+            listofOrder = new List<PriceInfo>();
             for (int i = 0; i < TypesOfDrinklines.Length; i++)
             {
                 var line = TypesOfDrinklines[i].Split(',');
@@ -142,7 +142,8 @@ namespace cafe
                            Size = ds.CupSize,
                            Price = df.CupInfoPrize,
                            Display = ds.CupSize + " $" + df.CupInfoPrize,
-                           DrinkName = drink.Name
+                           DrinkInfo = drink,
+                           FinalDrink = drink.Name + " " + ds.CupSize + " $" + df.CupInfoPrize
                        }
                        ).ToList();
 
@@ -157,9 +158,10 @@ namespace cafe
             }
             else 
             {
-                drink.location = counter;
+                abc[0].FinalDrink.Replace("One Size ", "");
+                abc[0].location = counter;
 
-                listofOrder.Add(drink);
+                listofOrder.Add(abc[0]);
 
                 counter++;
 
@@ -174,16 +176,16 @@ namespace cafe
         {
             var priceInfo = (PriceInfo)(((Button)sender).Tag);
 
-            
+            PriceInfo drink = priceInfo;
 
-            //drink.location = counter;
+            drink.location = counter;
 
-            //listofOrder.Add();
+            listofOrder.Add(drink);
 
-            //counter++;
+            counter++;
 
-            //ListViewOrderedDrinks.ItemsSource = null;
-            //ListViewOrderedDrinks.ItemsSource = listofOrder;
+            ListViewOrderedDrinks.ItemsSource = null;
+            ListViewOrderedDrinks.ItemsSource = listofOrder;
         }
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
@@ -209,7 +211,7 @@ namespace cafe
             {
                 foreach (var item in abc)
                 {
-                    Beverages itemToRemove = (Beverages)item;
+                    PriceInfo itemToRemove = (PriceInfo)item;
 
                     listofOrder.Remove(itemToRemove);
                 }
@@ -234,7 +236,7 @@ namespace cafe
         public string URLLink { get; set; }
         public string DrinkType { get; set; }
         public string DrinkCost { get; set; }
-        public int location { get; set; }
+       
     }
 
     public class SizesOFCups 
@@ -256,6 +258,8 @@ namespace cafe
         public double Price { get; set; }
         public string Display { get; set; }
 
-        public string DrinkName { get; set; }
+        public string FinalDrink { get; set; }
+        public Beverages DrinkInfo { get; set; }
+        public int location { get; set; }
     }
 }
