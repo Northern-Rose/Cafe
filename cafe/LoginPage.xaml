@@ -24,10 +24,10 @@
                HorizontalAlignment="Left"  
                VerticalAlignment="Top" 
                Source="images/1_RevtZAaAgh_CGLUj0BH3HQ_auto_x2-transformed.jpeg" Opacity="0.5" Stretch="Fill"/>
-        
-        
-        
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" 
+
+
+
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Foreground="white"   
                    TextWrapping="Wrap" Text="HomeBrew" 
                    VerticalAlignment="Center" FontSize="36"/>
 
@@ -35,11 +35,11 @@
             <Button Content="Login" HorizontalAlignment="Center" 
                 VerticalAlignment="Center" Width="156" Height="58" 
                 Click="Button_Click" 
-                Grid.Column="1" Background="#FFFE019A" FontSize="20" Opacity="0.75"/>
+                Background="#FFFE019A" Foreground="White" FontSize="20" Opacity="0.75" Margin="56,0,55,0"/>
             <Button Content="Admin login" HorizontalAlignment="Center" 
                     VerticalAlignment="Center" Width="156" Height="58" 
                     Click="Button_Click_Admin" 
-                    Grid.Column="1" Background="#FFFE019A" FontSize="20" Opacity="0.75"/>
+                    Background="#FFFE019A" Foreground="White" FontSize="20" Opacity="0.75" Margin="56,0,55,0"/>
         </StackPanel>
 
 

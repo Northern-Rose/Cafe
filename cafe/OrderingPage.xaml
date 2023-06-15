@@ -14,13 +14,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="auto" Background="Gray">
-            <TextBlock Text="User login" 
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="auto" Background="#030D22">
+            <TextBlock Text="User login" Foreground="white"
                         Margin="30,5,10,5"
                        VerticalAlignment="Center" FontSize="30"/>
-            <Button x:Name="LogOutButton" VerticalAlignment="Center" 
+            <Button x:Name="LogOutButton" VerticalAlignment="Center" Background="#E62882" Foreground="white"
                     FontSize="30" Content="Log Out" Height="60" Width="150" 
-                    Click="LogOutButton_Click" Margin="30,5,10,4.6"/>
+                    Click="LogOutButton_Click" Margin="30,5,10,4.6" Opacity="0.85"/>
         </StackPanel>
 
         <Grid Grid.Row="1">
@@ -29,20 +29,20 @@
                     <ColumnDefinition Width ="3*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.5" Stretch="Fill"/>
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
                 <Grid Grid.Column="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height =" auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="Choco_Drinks" Margin="20,30" FontSize="20" Content="Choco Drinks" Width="160" Height="80" Background="#FFE62882" Click="Choco_Drinks_Click">
+                        <Button x:Name="Choco_Drinks" Margin="20,30"  Foreground="white" FontSize="20" Content="Choco Drinks" Width="160" Height="80" Background="#FE019A" Click="Choco_Drinks_Click" Opacity="0.85">
                         </Button>
-                        <Button x:Name="Cold_Drinks"  Margin="20,30"  FontSize="20"   Content="Cold Drinks" Width="160" Height="80" Background="#FF0BD8E5" Click="Cold_Drinks_Click"/>
-                        <Button x:Name="Soft_Drinks"  Margin="20,30"   FontSize="20"  Content="Soft Drinks" Width="160" Height="80" Background="#FF01A8FE" Click="Soft_Drinks_Click"/>
-                        <Button x:Name="Coffee_Drinks"  Margin="20,30"  FontSize="20"   Content="Coffe Drinks" Width="160" Height="80" Background="#FFFF5F1F" Click="Coffee_Drinks_Click"/>
-                        <Button x:Name="Tea_drinks"  Margin="20,30"  FontSize="20"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" />
-                        <Button x:Name="All_Drinks"  Margin="20,30"  FontSize="20"  Content="All" Width="160" Height="80" Background="BlueViolet" Click="All_Drinks_Click"/>
+                        <Button x:Name="Cold_Drinks"  Margin="20,30"  Foreground="white"  FontSize="20"   Content="Cold Drinks" Width="160" Height="80" Background="#FE019A" Click="Cold_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Soft_Drinks"  Margin="20,30"  Foreground="white"   FontSize="20"  Content="Soft Drinks" Width="160" Height="80" Background="#FE019A" Click="Soft_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Coffee_Drinks"  Margin="20,30"  Foreground="white"  FontSize="20"   Content="Coffee Drinks" Width="160" Height="80" Background="#FE019A" Click="Coffee_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Tea_drinks"  Margin="20,30"  Foreground="white" FontSize="20"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" Opacity="0.85" />
+                        <Button x:Name="All_Drinks"  Margin="20,30"  Foreground="white" FontSize="20"  Content="All" Width="160" Height="80" Background="#FE019A" Click="All_Drinks_Click" Opacity="0.85"/>
                     </StackPanel>
 
                     <Grid Grid.Row="1">
@@ -79,7 +79,7 @@
                        VerticalAlignment="Top" Width="400" Height="400" IsOpen="false">
 
                     <Grid Background="Wheat">
-                        
+
                         <ListView x:Name="PopupContent">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -90,7 +90,7 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Button Width="100"  Height="40" Click="Button_Click" Content="{Binding Display}"/>
-                                    
+
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
@@ -122,15 +122,15 @@
                         <Button x:Name="PopUpClose" Margin="360,0,0,360" Background="#FFD1D1D1" Click="ClosePopUp_Click" />
                     </Grid>
                 </Popup>
-                
+
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height =" auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Refresh" Width="160" Height="80" Background="#FFE62882" Click="Refresh_Click"/>
-                        <Button x:Name="Past_Orders"  Margin="20,30"  FontSize="20"   Content="Past Orders" Width="160" Height="80" Background="#FF0BD8E5"/>
+                        <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Clear Orders" Width="160" Height="80" Background="#FFFB00" Click="Refresh_Click" Opacity="0.85"/>
+                        <Button x:Name="Past_Orders"  Margin="20,30"  FontSize="20"   Content="Past Orders" Width="160" Height="80" Background="#FFFB00" Opacity="0.85"/>
                     </StackPanel>
 
                     <Grid Grid.Row="1" Margin="0,0,0,133">
@@ -153,7 +153,7 @@
                     </Grid>
 
                     <Grid Grid.Row="2" Margin="0,785,0,0">
-                        <Button x:Name="Confirm"  Margin="10,10,10,10"  FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
+                        <Button x:Name="Confirm"  Margin="10,-35,10,10"  Foreground="white" FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Opacity="0.85"/>
                     </Grid>
                 </Grid>
             </Grid>
