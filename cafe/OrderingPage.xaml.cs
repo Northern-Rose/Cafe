@@ -138,14 +138,10 @@ namespace cafe
                        }
                        ).ToList();
 
-            if (abc.Count == 3)
+            if (abc.Count > 1)
             {
                 ThreeSizePopup.IsOpen = true;
                 PopupContent.ItemsSource = abc;
-            }
-            else if (abc.Count == 2)
-            {
-                TwoSizePopUp.IsOpen = true;
             }
             else 
             {
@@ -214,7 +210,6 @@ namespace cafe
         private void ClosePopUp_Click(object sender, RoutedEventArgs e)
         {
             ThreeSizePopup.IsOpen = false;
-            TwoSizePopUp.IsOpen = false;
         }
 
     }
