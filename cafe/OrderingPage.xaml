@@ -143,7 +143,7 @@
                     </Grid>
 
                     <Grid Grid.Row="2" Margin="0,785,0,0">
-                        <Button x:Name="Confirm"  Margin="10,-35,10,10"  Foreground="white" FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Opacity="0.85"/>
+                        <Button x:Name="Confirm"  Margin="10,10,10,10"  FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Grid>
             </Grid>
