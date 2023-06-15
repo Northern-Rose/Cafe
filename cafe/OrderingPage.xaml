@@ -89,7 +89,7 @@
 
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Button Margin="0,55,0,0" Background="LightBlue" Width="117"  Height="80" 
+                                    <Button FontSize="20" Margin="0,55,0,0" Background="LightBlue" Width="117"  Height="80" 
                                             Click="ThreePopUp_Click" 
                                             Tag="{Binding}"
                                             Content="{Binding Display}"/>
@@ -104,7 +104,7 @@
                 <Popup Margin="10,10,0,13" Placement="Center" Name="TwoSizePopUp" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="400" IsOpen="false">
                     <Grid Background="White">
                         <Button Margin="167,195,181,150">
-                            <Label Content="M" FontSize="20"/>
+                            <Label Content="M" FontSize="5"/>
                         </Button>
                         <Button Margin="278,195,70,150">
                             <Label Content="L" FontSize="20"/>
