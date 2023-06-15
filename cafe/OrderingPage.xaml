@@ -80,7 +80,7 @@
 
                     <Grid>
 
-                        <ListView x:Name="PopupContent" Background="DarkBlue" BorderThickness="0">
+                        <ListView x:Name="PopupContent" Background="Pink" BorderThickness="0">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -130,7 +130,7 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                    </Grid>
+                    </Grid>    
 
                     <Grid Grid.Row="2" Margin="0,785,0,0">
                         <Button x:Name="Confirm"  Margin="10,10,10,10"  FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
