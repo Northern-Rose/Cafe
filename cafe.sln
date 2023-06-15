@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cafe", "cafe\cafe.csproj", "{CEFA794A-9E36-43A6-9B11-F8229410C0FE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{111BD9C4-E600-4B20-B992-D557471C032D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\Press_Start_2P\PressStart2P-Regular.ttf = ..\..\..\..\Downloads\Press_Start_2P\PressStart2P-Regular.ttf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

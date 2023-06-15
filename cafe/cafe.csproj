@@ -124,6 +124,7 @@
     <None Include="ExcelLists\Drink_List.csv" />
     <None Include="ExcelLists\Drink_Size_Relationship.csv" />
     <None Include="ExcelLists\Size_Type.csv" />
+    <Resource Include="PressStart2P-Regular.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

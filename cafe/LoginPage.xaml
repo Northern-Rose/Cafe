@@ -29,17 +29,17 @@
 
         <TextBlock Grid.Column="1" HorizontalAlignment="Center" Foreground="white"   
                    TextWrapping="Wrap" Text="HomeBrew" 
-                   VerticalAlignment="Center" FontSize="36"/>
+                   VerticalAlignment="Center" FontSize="36" FontFamily="./#Press Start 2P"/>
 
-        <StackPanel Grid.Column="1" Grid.Row="1">
+        <StackPanel Grid.Column="1" Grid.Row="1" >
             <Button Content="Login" HorizontalAlignment="Center" 
                 VerticalAlignment="Center" Width="156" Height="58" 
                 Click="Button_Click" 
-                Background="#FFFE019A" Foreground="White" FontSize="20" Opacity="0.75" Margin="56,0,55,0"/>
+                Background="#FFFE019A" Foreground="White"  FontFamily="./#Press Start 2P" FontSize="10" Opacity="0.75" Margin="56,0,55,0"/>
             <Button Content="Admin login" HorizontalAlignment="Center" 
                     VerticalAlignment="Center" Width="156" Height="58" 
                     Click="Button_Click_Admin" 
-                    Background="#FFFE019A" Foreground="White" FontSize="20" Opacity="0.75" Margin="56,0,55,0"/>
+                    Background="#FFFE019A" Foreground="White"  FontFamily="./#Press Start 2P" FontSize="10" Opacity="0.75" Margin="56,0,55,0"/>
         </StackPanel>
 
 
