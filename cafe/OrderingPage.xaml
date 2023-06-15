@@ -107,7 +107,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Clear Orders" Width="160" Height="80" Background="#FFFB00" Click="Refresh_Click" Opacity="0.85"/>
+                        <Button x:Name="Refresh" Margin="20,30" FontSize="20" Content="Clear Order" Width="160" Height="80" Background="#FFFB00" Click="Refresh_Click" Opacity="0.85"/>
                         <Button x:Name="Past_Orders"  Margin="20,30"  FontSize="20"   Content="Past Orders" Width="160" Height="80" Background="#FFFB00" Opacity="0.85"/>
                     </StackPanel>
 
