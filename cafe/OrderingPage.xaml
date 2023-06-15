@@ -80,7 +80,7 @@
 
                     <Grid>
 
-                        <ListView x:Name="PopupContent" Background="Pink" BorderThickness="0">
+                        <ListView x:Name="PopupContent" Background="HotPink" BorderThickness="0">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -97,7 +97,7 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                        <Button BorderThickness="0" x:Name="ClosePopUp" Content="X" Margin="360,0,0,160" Background="PaleVioletRed" Click="ClosePopUp_Click"/>
+                        <Button BorderThickness="0" x:Name="ClosePopUp" Content="X" Margin="360,0,0,160" Background="DarkViolet" Click="ClosePopUp_Click"/>
                     </Grid>
                 </Popup>
                 

@@ -31,6 +31,7 @@ namespace cafe
         {
             InitializeComponent();
 
+            var dattime = DateTime.Now.ToString("ddMMyyyy_HHmmss");
             var TypesOfDrinklines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();
@@ -137,6 +138,7 @@ namespace cafe
                            FinalDrink = drink.Name + " " + ds.CupSize + " $" + df.CupInfoPrize
                        }
                        ).ToList();
+
 
             if (abc.Count > 1)
             {
