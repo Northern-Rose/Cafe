@@ -167,5 +167,31 @@
     <Resource Include="images\1_RevtZAaAgh_CGLUj0BH3HQ_auto_x2-transformed.jpeg" />
     <Resource Include="images\Cyberpunk_106_2_auto_x2-transformed.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CafeImages\Americano.jpg" />
+    <Resource Include="CafeImages\Cappuccino.jpg" />
+    <Resource Include="CafeImages\Caramel Affogato.jpg" />
+    <Resource Include="CafeImages\Caramel Latte.jpg" />
+    <Resource Include="CafeImages\Coke Zero.jpg" />
+    <Resource Include="CafeImages\Coke.jpg" />
+    <Resource Include="CafeImages\English Breakfast.jpg" />
+    <Resource Include="CafeImages\Fanta.jpg" />
+    <Resource Include="CafeImages\Flat White.jpg" />
+    <Resource Include="CafeImages\Green Tea.jpg" />
+    <Resource Include="CafeImages\Hot Chocolate.jpg" />
+    <Resource Include="CafeImages\Ice Chocolate.jpg" />
+    <Resource Include="CafeImages\Ice Coffee.jpg" />
+    <Resource Include="CafeImages\Ice latte.jpg" />
+    <Resource Include="CafeImages\L&amp;P.jpg" />
+    <Resource Include="CafeImages\Latte.jpg" />
+    <Resource Include="CafeImages\Lemon Tea.jpg" />
+    <Resource Include="CafeImages\Long Black.jpg" />
+    <Resource Include="CafeImages\Mocha.jpg" />
+    <Resource Include="CafeImages\Piccolo Latte.jpg" />
+    <Resource Include="CafeImages\Short Black.jpg" />
+    <Resource Include="CafeImages\Sprite.jpg" />
+    <Resource Include="CafeImages\Vanilla Latte.jpg" />
+    <Resource Include="CafeImages\White Hot Chocolate.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
