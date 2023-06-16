@@ -103,17 +103,21 @@
 
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
                         <RowDefinition Height =" *"/>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                         
                     </Grid.RowDefinitions>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="Refresh" Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#FFFB00" Click="Refresh_Click" Opacity="0.85"/>
-                        <Button x:Name="Past_Orders"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FFFB00" Opacity="0.85"/>
-                    </StackPanel>
-
                     <Grid Grid.Row="0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="Refresh" Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#FFFB00" Click="Refresh_Click" Opacity="0.85"/>
+                            <Button x:Name="Past_Orders"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FFFB00" Opacity="0.85"/>
+                        </StackPanel>
+                    </Grid>
+                    
+
+                    <Grid Grid.Row="1">
                         <ListView x:Name="ListViewOrderedDrinks" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   HorizontalContentAlignment="Center" 
@@ -132,7 +136,7 @@
                         </ListView>
                     </Grid>
 
-                    <Grid Grid.Row="1" Background="White" >
+                    <Grid Grid.Row="2" Background="White" >
 
                         <Label x:Name="CostDisplay" Content=""
                                FontFamily="./#Press Start 2P" 
@@ -140,7 +144,7 @@
 
                     </Grid>
 
-                    <Grid Grid.Row="2">
+                    <Grid Grid.Row="3">
                         <Button x:Name="Confirm" FontFamily="./#Press Start 2P" FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Grid>
