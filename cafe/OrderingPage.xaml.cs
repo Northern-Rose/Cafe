@@ -44,7 +44,7 @@ namespace cafe
                 {
                     Id = Int32.Parse(line[0]),
                     Name = line[1],
-                    URLLink = "/images/" + line[2],
+                    URLLink = "/CafeImages/" + line[2],
                     DrinkType = line[3],
                 });
             }

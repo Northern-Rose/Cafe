@@ -183,7 +183,7 @@
     <Resource Include="CafeImages\Ice Coffee.jpg" />
     <Resource Include="CafeImages\Ice latte.jpg" />
     <Resource Include="CafeImages\L&amp;P.jpg" />
-    <Resource Include="CafeImages\Latte.jpg" />
+    <Resource Include="CafeImages\Cafe Latte.jpg" />
     <Resource Include="CafeImages\Lemon Tea.jpg" />
     <Resource Include="CafeImages\Long Black.jpg" />
     <Resource Include="CafeImages\Mocha.jpg" />
@@ -192,6 +192,18 @@
     <Resource Include="CafeImages\Sprite.jpg" />
     <Resource Include="CafeImages\Vanilla Latte.jpg" />
     <Resource Include="CafeImages\White Hot Chocolate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CafeImages\Ice Americano.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CafeImages\Ginger Tea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CafeImages\Macchiato.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CafeImages\White Chocolate Mocha.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
