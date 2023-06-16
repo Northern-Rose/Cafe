@@ -100,20 +100,21 @@
                         <Button BorderThickness="0" x:Name="ClosePopUp" Content="X" Margin="360,0,0,160" Background="DarkViolet" Click="ClosePopUp_Click"/>
                     </Grid>
                 </Popup>
-                
+
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height =" auto"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height =" *"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="Refresh" Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#FFFB00" Click="Refresh_Click" Opacity="0.85"/>
                         <Button x:Name="Past_Orders"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FFFB00" Opacity="0.85"/>
                     </StackPanel>
 
-                    <Grid Grid.Row="1" Margin="0,0,0,133">
+                    <Grid Grid.Row="0">
                         <ListView x:Name="ListViewOrderedDrinks" 
-                                  Margin="10,0,10,100" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   HorizontalContentAlignment="Center" 
                                   VerticalContentAlignment="Stretch" 
@@ -131,27 +132,16 @@
                         </ListView>
                     </Grid>
 
-                    <Grid Grid.Row="2">
-                        <ListView x:Name="TotalCostView" Margin="0,565,0,0" 
-                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                                  HorizontalContentAlignment="Center" 
-                                  VerticalContentAlignment="Stretch" 
-                                  Background="White"
-                                  BorderThickness="0"
-                                  Height="100"
-                                  Width="492">
-                            <ListView.ItemTemplate>
-                                <DataTemplate >
-                                    <StackPanel>
-                                        <Label FontFamily="./#Press Start 2P" FontWeight="Bold" FontSize="15" Content="{Binding FinalDrink}" />
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
+                    <Grid Grid.Row="1" Background="White" >
+
+                        <Label x:Name="CostDisplay" Content=""
+                               FontFamily="./#Press Start 2P" 
+                               FontWeight="Bold" FontSize="40" />
+
                     </Grid>
 
-                    <Grid Grid.Row="2" Margin="0,785,0,0">
-                        <Button x:Name="Confirm"  Margin="10,10,10,10"  FontFamily="./#Press Start 2P" FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
+                    <Grid Grid.Row="2">
+                        <Button x:Name="Confirm" FontFamily="./#Press Start 2P" FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Grid>
             </Grid>

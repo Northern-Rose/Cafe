@@ -27,6 +27,7 @@ namespace cafe
         List<CupInfo> listOfDrinkInfo;
 
         int counter = 0;
+        double totalCost = 0;
         public OrderingPage()
         {
             InitializeComponent();
@@ -153,6 +154,10 @@ namespace cafe
 
                 counter++;
 
+                totalCost = totalCost + abc[0].Price;
+
+                CostDisplay.Content = "$ " + totalCost;
+
                 ListViewOrderedDrinks.ItemsSource = null;
                 ListViewOrderedDrinks.ItemsSource = listofOrder;
             }
@@ -169,6 +174,10 @@ namespace cafe
             listofOrder.Add(drink);
 
             counter++;
+
+            totalCost = totalCost + drink.Price;
+
+            CostDisplay.Content = "$ " + totalCost;
 
             ListViewOrderedDrinks.ItemsSource = null;
             ListViewOrderedDrinks.ItemsSource = listofOrder;
@@ -201,7 +210,12 @@ namespace cafe
                 {
                     PriceInfo itemToRemove = (PriceInfo)item;
 
+                    totalCost = totalCost - itemToRemove.Price;
+                    CostDisplay.Content = "$ " + totalCost;
+
                     listofOrder.Remove(itemToRemove);
+
+
                 }
 
                 ListViewOrderedDrinks.ItemsSource = null;
