@@ -189,6 +189,9 @@ namespace cafe
         {
             listofOrder.Clear();
             ListViewOrderedDrinks.ItemsSource = null;
+
+            totalCost = 0;
+            CostDisplay.Content = "$ " + totalCost;
         }
 
         private void All_Drinks_Click(object sender, RoutedEventArgs e)
