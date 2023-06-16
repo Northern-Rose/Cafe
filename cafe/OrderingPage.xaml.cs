@@ -156,7 +156,7 @@ namespace cafe
 
                 totalCost = totalCost + abc[0].Price;
 
-                CostDisplay.Content = "Total Cost: $ " + totalCost;
+                CostDisplay.Content = "Total Cost: $" + totalCost;
 
                 ListViewOrderedDrinks.ItemsSource = null;
                 ListViewOrderedDrinks.ItemsSource = listofOrder;
@@ -177,7 +177,7 @@ namespace cafe
 
             totalCost = totalCost + drink.Price;
 
-            CostDisplay.Content = "Total Cost: $ " + totalCost;
+            CostDisplay.Content = "Total Cost: $" + totalCost;
 
             ListViewOrderedDrinks.ItemsSource = null;
             ListViewOrderedDrinks.ItemsSource = listofOrder;
@@ -191,7 +191,7 @@ namespace cafe
             ListViewOrderedDrinks.ItemsSource = null;
 
             totalCost = 0;
-            CostDisplay.Content = "Total Cost: $ " + totalCost;
+            CostDisplay.Content = "Total Cost: $" + totalCost;
         }
 
         private void All_Drinks_Click(object sender, RoutedEventArgs e)
@@ -214,7 +214,7 @@ namespace cafe
                     PriceInfo itemToRemove = (PriceInfo)item;
 
                     totalCost = totalCost - itemToRemove.Price;
-                    CostDisplay.Content = "Total Cost: $ " + totalCost;
+                    CostDisplay.Content = "Total Cost: $" + totalCost;
 
                     listofOrder.Remove(itemToRemove);
 
