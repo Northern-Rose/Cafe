@@ -194,9 +194,6 @@
     <Resource Include="CafeImages\White Hot Chocolate.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="CafeImages\Ice Americano.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="CafeImages\Ginger Tea.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +201,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="CafeImages\White Chocolate Mocha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hot Chocolate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CafeImages\Ice Americano.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
