@@ -132,12 +132,14 @@
                     </Grid>
 
                     <Grid Grid.Row="2">
-                        <ListView x:Name="TotalCostView" Margin="10, 690, 10, -6" 
+                        <ListView x:Name="TotalCostView" Margin="0,565,0,0" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   HorizontalContentAlignment="Center" 
                                   VerticalContentAlignment="Stretch" 
                                   Background="White"
-                                  BorderThickness="0">
+                                  BorderThickness="0"
+                                  Height="100"
+                                  Width="492">
 
                             <ListView.ItemTemplate>
                                 <DataTemplate >
