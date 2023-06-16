@@ -113,14 +113,13 @@
 
                     <Grid Grid.Row="1" Margin="0,0,0,133">
                         <ListView x:Name="ListViewOrderedDrinks" 
-                                  Margin="10,0,10,-0.6" 
+                                  Margin="10,0,10,100" 
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   HorizontalContentAlignment="Center" 
                                   VerticalContentAlignment="Stretch" 
                                   KeyDown="ListView_KeyDown"
                                   Background="White"
                                   BorderThickness="0">
-                            
 
                             <ListView.ItemTemplate>
                                 <DataTemplate >
@@ -130,7 +129,25 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                    </Grid>    
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <ListView x:Name="TotalCostView" Margin="10, 690, 10, -6" 
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  HorizontalContentAlignment="Center" 
+                                  VerticalContentAlignment="Stretch" 
+                                  Background="White"
+                                  BorderThickness="0">
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate >
+                                    <StackPanel>
+                                        <Label FontFamily="./#Press Start 2P" FontWeight="Bold" FontSize="15" Content="{Binding FinalDrink}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
 
                     <Grid Grid.Row="2" Margin="0,785,0,0">
                         <Button x:Name="Confirm"  Margin="10,10,10,10"  FontFamily="./#Press Start 2P" FontSize="20" Height="110"  Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
