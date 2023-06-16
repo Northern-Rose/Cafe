@@ -124,7 +124,8 @@
                                   VerticalContentAlignment="Stretch" 
                                   KeyDown="ListView_KeyDown"
                                   Background="White"
-                                  BorderThickness="0">
+                                  BorderThickness="0"
+                                  FocusVisualStyle="{x:Null}">
 
                             <ListView.ItemTemplate>
                                 <DataTemplate >
