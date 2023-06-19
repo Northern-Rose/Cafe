@@ -28,11 +28,12 @@ namespace cafe
 
         int counter = 0;
         double totalCost = 0;
+      
         public OrderingPage()
         {
             InitializeComponent();
 
-            var dattime = DateTime.Now.ToString("ddMMyyyy_HHmmss");
+            
             var TypesOfDrinklines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();
@@ -126,11 +127,7 @@ namespace cafe
 
             Beverages drink = (from d in listOfDrinks where d.Name.Equals(name) select d).First();
 
-            var abc = (from df in listOfDrinkInfo
-                       join ds in listOfDrinkSizes
-                       on df.CupInfoSize equals ds.sizeID
-                       where df.CupInfoID == drink.Id
-                       select new PriceInfo
+            var abc = (from df in listOfDrinkInfo join ds in listOfDrinkSizes on df.CupInfoSize equals ds.sizeID where df.CupInfoID == drink.Id select new PriceInfo
                        {
                            Size = ds.CupSize,
                            Price = df.CupInfoPrize,
@@ -140,7 +137,6 @@ namespace cafe
                        }
                        ).ToList();
 
-
             if (abc.Count > 1)
             {
                 ThreeSizePopup.IsOpen = true;
@@ -148,6 +144,7 @@ namespace cafe
             }
             else 
             {
+                ThreeSizePopup.IsOpen = false;
                 abc[0].location = counter;
 
                 listofOrder.Add(abc[0]);
@@ -217,8 +214,6 @@ namespace cafe
                     CostDisplay.Content = "Total Cost: $" + totalCost;
 
                     listofOrder.Remove(itemToRemove);
-
-
                 }
 
                 ListViewOrderedDrinks.ItemsSource = null;
@@ -231,6 +226,27 @@ namespace cafe
             ThreeSizePopup.IsOpen = false;
         }
 
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            var datetime = DateTime.Now.ToString("ddMMyyyy_HHmmss");
+            FileStream fs = new FileStream("C:\\Users\\270235677\\OneDrive - UP Education\\Documents\\GitHub\\Cafe\\cafe\\Reciepts\\" + datetime + ".txt", FileMode.Append, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+
+            for (int i = 0; i < listofOrder.Count; i++)
+            {
+                sw.WriteLine(listofOrder[i].FinalDrink);
+            }
+            sw.Flush();
+            sw.Close();
+            fs.Close();
+
+
+
+            listofOrder.Clear();
+            ListViewOrderedDrinks.ItemsSource = null;
+            totalCost = 0;
+            CostDisplay.Content = "Total Cost: $" + totalCost;
+        }
     }
 
     public class Beverages 
@@ -240,7 +256,6 @@ namespace cafe
         public string URLLink { get; set; }
         public string DrinkType { get; set; }
         public string DrinkCost { get; set; }
-       
     }
 
     public class SizesOFCups 

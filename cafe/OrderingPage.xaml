@@ -147,7 +147,7 @@
                     </Grid>
 
                     <Grid Grid.Row="3">
-                        <Button x:Name="Confirm" FontFamily="./#Press Start 2P" FontSize="20" Height="110" Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2"/>
+                        <Button x:Name="Confirm" FontFamily="./#Press Start 2P" FontSize="20" Height="110" Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2" Click="Confirm_Click"/>
                     </Grid>
                 </Grid>
             </Grid>
