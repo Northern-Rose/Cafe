@@ -55,7 +55,7 @@
 
         <TextBox x:Name="txtSearch" HorizontalAlignment="Left" VerticalAlignment="top"
                  Margin="10"
-                 VerticalContentAlignment="Center" Background="#FE019A" FontSize="20"  Height="50" Width="300" Grid.Row="2" 
+                 VerticalContentAlignment="Center" FontFamily="./#Press Start 2P" Background="#FE019A" FontSize="20"  Height="50" Width="300" Grid.Row="2" 
                  TextChanged="txtSearch_TextChanged" Opacity="0.71"></TextBox>
         
         <Label  x:Name="txtSearchPlaceholder"  Margin="10,20"

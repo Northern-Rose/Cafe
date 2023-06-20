@@ -9,6 +9,33 @@
       Title="RecieptPage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height =" auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Image HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top"  Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="auto">
+            <TextBlock Text="User login" Foreground="white"
+                        Margin="30,5,10,5"
+                       VerticalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"/>
+
+            <Button x:Name="goBack" VerticalAlignment="Center" Background="#E62882" Foreground="white"
+                    FontFamily="./#Press Start 2P" FontSize="20" Content="Go Back" Height="60" Width="150" 
+                    Click="goBackButton_Click" Margin="30,5,10,4.6" Opacity="0.85"/>
+        </StackPanel>
+
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" VerticalAlignment="top"
+                 Margin="10"
+                 VerticalContentAlignment="Center" FontFamily="./#Press Start 2P" Background="#FE019A" FontSize="20"  Height="50" Width="300" Grid.Row="2" 
+                 TextChanged="txtSearch_TextChanged" Opacity="0.71"></TextBox>
+
+        <Label  x:Name="txtSearchPlaceholder"  Margin="10,20"
+                 Content="Order Search.." FontFamily="./#Press Start 2P" Background="Transparent" 
+                Opacity="0.5" FontSize="20" IsHitTestVisible="False"  Grid.Row="2"/>
+
+        
         
     </Grid>
 </Page>
