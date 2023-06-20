@@ -46,21 +46,22 @@ namespace cafe
                 Directory.CreateDirectory(CSVpath);
             }
 
-            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_List.csv"))
+            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_List.csv"))
             {
                 File.Copy(System.IO.Path.GetFullPath(@"..\..\ExcelLists\Drink_List.csv"), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_List.csv");
 
             }
-            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_Size_Relationship.csv"))
+            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_Size_Relationship.csv"))
             {
                 File.Copy(System.IO.Path.GetFullPath(@"..\..\ExcelLists\Drink_Size_Relationship.csv"), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_Size_Relationship.csv");
 
             }
-            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Size_Type.csv"))
+            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Size_Type.csv"))
             {
                 File.Copy(System.IO.Path.GetFullPath(@"..\..\ExcelLists\Size_Type.csv"), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Size_Type.csv");
-            }
 
+            }
+            
             LoginPage page = new LoginPage();
 
             currentDisplayPage = page;
