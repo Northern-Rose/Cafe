@@ -11,10 +11,11 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height =" auto"/>
+            <RowDefinition Height =" auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <Image HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top"  Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top"  Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
         
         <StackPanel Grid.Row="0" Orientation="Horizontal" Height="auto">
             <TextBlock Text="User login" Foreground="white"
@@ -35,7 +36,35 @@
                  Content="Order Search.." FontFamily="./#Press Start 2P" Background="Transparent" 
                 Opacity="0.5" FontSize="20" IsHitTestVisible="False"  Grid.Row="2"/>
 
-        
-        
+
+
+        <Grid Grid.Row="1">
+            <ListView x:Name="ListViewProperty" Margin="10,0,20,10.4" 
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Width="240" Tag="{Binding Name}">
+                            <StackPanel Opacity="100">
+                                <Image Source="{Binding URLLink}" />
+                                <Label FontSize="15"
+                                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Content="{Binding Name}" FontFamily="./#Press Start 2P"  FontWeight="Bold" />
+                            </StackPanel>
+                        </Button>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
     </Grid>
 </Page>
