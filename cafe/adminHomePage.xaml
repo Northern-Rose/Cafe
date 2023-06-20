@@ -32,10 +32,10 @@
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="MENU" BorderThickness="1" Background="#FFFB00"  Foreground="black" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"   FontSize="20" Grid.ColumnSpan="2" Opacity="0.71" />
-            <Button Content="STAFF" BorderThickness="1" Grid.Column="2" Background="#FFFB00" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
-            <Button Content="ORDERS" BorderThickness="1" Grid.Column="3" Background="#FFFB00" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
-            <Button Content="FINANCIAL REPORTS" BorderThickness="1" Grid.Column="4" Background="#FFFB00" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+            <Button Content="MENU" BorderThickness="1"  Background="#FF6B35" Foreground="White" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"   FontSize="20" Grid.ColumnSpan="2" Opacity="0.71" />
+            <Button Content="STAFF" BorderThickness="1" Grid.Column="2" Background="#FF6B35" Foreground="White" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+            <Button Content="ORDERS" BorderThickness="1" Grid.Column="3" Background="#FF6B35" Foreground="White" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+            <Button Content="FINANCIAL REPORTS" BorderThickness="1" Grid.Column="4" Background="#FF6B35" Foreground="White" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
         </Grid>
 
 
@@ -51,10 +51,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="DRINK" Margin="10,10,10,10" BorderThickness="1" FontSize="20" Grid.Column="0" Background="#0BD8E5" Width="200" Opacity="0.71"/>
-            <Button Content="DRINK" Margin="10,10,10,10" BorderThickness="1" FontSize="20" Grid.Column="1"  Background="#0BD8E5"  Width="200" Opacity="0.71"/>
-            <Button Content="DRINK" Margin="10,10,10,10" BorderThickness="1" FontSize="20" Grid.Column="2"  Background="#0BD8E5"  Width="200" Opacity="0.71"/>
-            <Button Content="DRINK" Margin="10,10,10,10" BorderThickness="1" FontSize="20" Grid.Column="3"  Background="#0BD8E5"  Width="200" Opacity="0.71"/>
+            <Button Content="DRINK" Margin="10,10,10,10" Foreground="White" FontFamily="./#Press Start 2P"   BorderThickness="1" FontSize="20" Grid.Column="0" Background="#0BD8E5" Width="200" Opacity="0.71"/>
+            <Button Content="DRINK" Margin="10,10,10,10" Foreground="White" FontFamily="./#Press Start 2P"  BorderThickness="1" FontSize="20" Grid.Column="1"  Background="#0BD8E5"  Width="200" Opacity="0.71"/>
+            <Button Content="DRINK" Margin="10,10,10,10" Foreground="White" FontFamily="./#Press Start 2P"   BorderThickness="1" FontSize="20" Grid.Column="2"  Background="#0BD8E5"  Width="200" Opacity="0.71"/>
+            <Button Content="DRINK" Margin="10,10,10,10" Foreground="White" FontFamily="./#Press Start 2P"   BorderThickness="1" FontSize="20" Grid.Column="3"  Background="#0BD8E5"  Width="200" Opacity="0.71"/>
 
         </Grid>
 
