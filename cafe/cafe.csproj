@@ -218,8 +218,6 @@
   <ItemGroup>
     <Resource Include="CafeImages\Ice Americano.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reciepts\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

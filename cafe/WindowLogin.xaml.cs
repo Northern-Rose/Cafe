@@ -30,16 +30,20 @@ namespace cafe
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
+            }
 
-                string Recieptpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets";
+            string Recieptpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets";
 
+            if (!Directory.Exists(Recieptpath))
+            {
+                Directory.CreateDirectory(Recieptpath);
+            }
 
-                if (!Directory.Exists(Recieptpath))
-                {
-                    Directory.CreateDirectory(Recieptpath);
+            string CSVpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files";
 
-
-                }
+            if (!Directory.Exists(CSVpath))
+            {
+                Directory.CreateDirectory(CSVpath);
             }
 
             LoginPage page = new LoginPage();

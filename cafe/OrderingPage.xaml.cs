@@ -247,6 +247,13 @@ namespace cafe
             totalCost = 0;
             CostDisplay.Content = "Total Cost: $" + totalCost;
         }
+
+        private void Past_Orders_Click(object sender, RoutedEventArgs e)
+        {
+
+            ThreeSizePopup.IsOpen = false;
+            RecieptPopUp.IsOpen = true;
+        }
     }
 
     public class Beverages 
