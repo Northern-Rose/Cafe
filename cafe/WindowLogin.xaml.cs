@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,25 @@ namespace cafe
         public WindowLogin()
         {
             InitializeComponent();
+
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew";
+
+
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+
+                string Recieptpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets";
+
+
+                if (!Directory.Exists(Recieptpath))
+                {
+                    Directory.CreateDirectory(Recieptpath);
+
+
+                }
+            }
+
             LoginPage page = new LoginPage();
 
             currentDisplayPage = page;

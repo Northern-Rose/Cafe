@@ -229,7 +229,7 @@ namespace cafe
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             var datetime = DateTime.Now.ToString("ddMMyyyy_HHmmss");
-            FileStream fs = new FileStream("C:\\Users\\270235677\\OneDrive - UP Education\\Documents\\GitHub\\Cafe\\cafe\\Reciepts\\" + datetime + ".txt", FileMode.Append, FileAccess.Write);
+            FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets\\" + datetime + ".txt", FileMode.Append, FileAccess.Write);
             StreamWriter sw = new StreamWriter(fs);
 
             for (int i = 0; i < listofOrder.Count; i++)
