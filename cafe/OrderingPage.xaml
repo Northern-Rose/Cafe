@@ -36,12 +36,12 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="Choco_Drinks" Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10" Content="Choco Drinks" Width="160" Height="80" Background="#FE019A" Click="Choco_Drinks_Click" Opacity="0.85"></Button>
-                        <Button x:Name="Cold_Drinks"  Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10"   Content="Cold Drinks" Width="160" Height="80" Background="#FE019A" Click="Cold_Drinks_Click" Opacity="0.85"/>
-                        <Button x:Name="Soft_Drinks"  Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10"  Content="Soft Drinks" Width="160" Height="80" Background="#FE019A" Click="Soft_Drinks_Click" Opacity="0.85"/>
-                        <Button x:Name="Coffee_Drinks"  Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10"   Content="Coffee Drinks" Width="160" Height="80" Background="#FE019A" Click="Coffee_Drinks_Click" Opacity="0.85"/>
-                        <Button x:Name="Tea_drinks"  Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" Opacity="0.85" />
-                        <Button x:Name="All_Drinks"  Margin="20,30" FontFamily="./#Press Start 2P" FontSize="10"  Content="All" Width="160" Height="80" Background="#FE019A" Click="All_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Choco_Drinks" Margin="20,30" Foreground="White" FontFamily="./#Press Start 2P" FontSize="10" Content="Choco Drinks" Width="160" Height="80" Background="#FE019A" Click="Choco_Drinks_Click" Opacity="0.85"></Button>
+                        <Button x:Name="Cold_Drinks"  Margin="20,30"  Foreground="White" FontFamily="./#Press Start 2P" FontSize="10"   Content="Cold Drinks" Width="160" Height="80" Background="#FE019A" Click="Cold_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Soft_Drinks"  Margin="20,30"  Foreground="White"  FontFamily="./#Press Start 2P" FontSize="10"  Content="Soft Drinks" Width="160" Height="80" Background="#FE019A" Click="Soft_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Coffee_Drinks"  Margin="20,30"  Foreground="White" FontFamily="./#Press Start 2P" FontSize="10"   Content="Coffee Drinks" Width="160" Height="80" Background="#FE019A" Click="Coffee_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Tea_drinks"  Margin="20,30"  Foreground="White" FontFamily="./#Press Start 2P" FontSize="10"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" Opacity="0.85" />
+                        <Button x:Name="All_Drinks"  Margin="20,30"  Foreground="White" FontFamily="./#Press Start 2P" FontSize="10"  Content="All" Width="160" Height="80" Background="#FE019A" Click="All_Drinks_Click" Opacity="0.85"/>
                     </StackPanel>
 
                     <Grid Grid.Row="1">
@@ -79,17 +79,17 @@
 
                     <Grid>
 
-                        <ListView x:Name="PopupContent" Background="HotPink" BorderThickness="0">
+                        <ListView x:Name="PopupContent" Background="#030D22" BorderThickness="0">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                     <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </ItemsPanelTemplate>
                             </ListView.ItemsPanel>
 
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Button BorderThickness="0" FontSize="10" FontFamily="./#Press Start 2P"
-                                            FontWeight="Bold" Margin="0,0,0,0" Background="LightBlue" Width="117"  Height="80" 
+                                            FontWeight="Bold" Margin="0,0,0,0" Background="#E62882" Width="117"  Height="80" 
                                             Click="ThreePopUp_Click" 
                                             Tag="{Binding}"
                                             Content="{Binding Display}"/>
@@ -97,7 +97,7 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                        <Button BorderThickness="0" x:Name="ClosePopUp" Content="X" Margin="360,0,0,160" Background="DarkViolet" Click="ClosePopUp_Click"/>
+                        <Button BorderThickness="0" x:Name="ClosePopUp" FontFamily="./#Press Start 2P" Content="X" Margin="360,0,0,160" Background="#E62882" Click="ClosePopUp_Click"/>
                     </Grid>
                 </Popup>
 
@@ -132,8 +132,8 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button x:Name="Refresh" Margin="20,30" FontFamily="./#Press Start 2P"  FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#FFFB00" Click="Refresh_Click" Opacity="0.85"/>
-                            <Button x:Name="Past_Orders"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FFFB00" Opacity="0.85"/>
+                            <Button x:Name="Refresh" Foreground="white" Margin="20,30" FontFamily="./#Press Start 2P"  FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#FF6B35" Click="Refresh_Click" Opacity="0.85"/>
+                            <Button x:Name="Past_Orders" Foreground="white"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FF6B35" Opacity="0.85"/>
                         </StackPanel>
                     </Grid>
                     
@@ -168,7 +168,7 @@
                     </Grid>
 
                     <Grid Grid.Row="3">
-                        <Button x:Name="Confirm" FontFamily="./#Press Start 2P" FontSize="20" Height="110" Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2" Click="Confirm_Click"/>
+                        <Button x:Name="Confirm" Foreground="white" FontFamily="./#Press Start 2P" FontSize="20" Height="110" Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2" Click="Confirm_Click"/>
                     </Grid>
                 </Grid>
             </Grid>
