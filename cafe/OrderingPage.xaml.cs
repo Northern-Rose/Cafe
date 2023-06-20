@@ -34,7 +34,7 @@ namespace cafe
             InitializeComponent();
 
             
-            var TypesOfDrinklines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
+            var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();
             listofOrder = new List<PriceInfo>();
@@ -53,7 +53,7 @@ namespace cafe
 
             ListViewProperty.ItemsSource = listOfDrinks;
 
-            var DrinkSizes = File.ReadAllLines(@"../../ExcelLists/Size_Type.csv");
+            var DrinkSizes = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Size_Type.csv");
             listOfDrinkSizes = new List<SizesOFCups>();
             for (int i = 0; i < DrinkSizes.Length; i++)
             {
@@ -65,7 +65,7 @@ namespace cafe
                 });
             }
 
-            var drinkInfomation = File.ReadAllLines(@"../../ExcelLists/Drink_Size_Relationship.csv");
+            var drinkInfomation = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_Size_Relationship.csv");
             listOfDrinkInfo = new List<CupInfo>();
             for (int i = 0; i < drinkInfomation.Length; i++)
             {
