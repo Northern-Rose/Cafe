@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,27 @@ namespace cafe
     /// </summary>
     public partial class adminHomePage : Page
     {
+        List<Beverages> listOfDrinks;
         public adminHomePage()
         {
             InitializeComponent();
+
+            var TypesOfDrinklines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
+
+            listOfDrinks = new List<Beverages>();
+            for (int i = 0; i < TypesOfDrinklines.Length; i++)
+            {
+                var line = TypesOfDrinklines[i].Split(',');
+
+                listOfDrinks.Add(new Beverages
+                {
+                    Id = Int32.Parse(line[0]),
+                    Name = line[1],
+                    URLLink = "/CafeImages/" + line[2],
+                    DrinkType = line[3],
+                });
+            }
+            ListViewProperty.ItemsSource = listOfDrinks;
         }
 
         private void LogOutButton_Click(object sender, RoutedEventArgs e)
