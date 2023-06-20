@@ -74,6 +74,9 @@
     <Compile Include="OrderingPage.xaml.cs">
       <DependentUpon>OrderingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RecieptPage.xaml.cs">
+      <DependentUpon>RecieptPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SampleSaleWindow.xaml.cs">
       <DependentUpon>SampleSaleWindow.xaml</DependentUpon>
     </Compile>
@@ -101,6 +104,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OrderingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecieptPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

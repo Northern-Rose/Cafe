@@ -248,11 +248,13 @@ namespace cafe
             CostDisplay.Content = "Total Cost: $" + totalCost;
         }
 
-        private void Past_Orders_Click(object sender, RoutedEventArgs e)
+        private void Past_Orders_Click_1(object sender, RoutedEventArgs e)
         {
-
             ThreeSizePopup.IsOpen = false;
-            RecieptPopUp.IsOpen = true;
+
+            RecieptPage page = new RecieptPage();
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page;
         }
     }
 

@@ -101,27 +101,6 @@
                     </Grid>
                 </Popup>
 
-                <Popup Name="RecieptPopUp" IsOpen="False">
-                    <Grid>
-                        <ListView x:Name="RecieptContent">
-                            <ListView.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <WrapPanel>
-                                        
-                                    </WrapPanel>
-                                </ItemsPanelTemplate>
-                            </ListView.ItemsPanel>
-
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                            
-                        </ListView>
-                    </Grid>
-                </Popup>
-
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
@@ -133,7 +112,7 @@
                     <Grid Grid.Row="0">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <Button x:Name="Refresh" Foreground="white" Margin="20,30" FontFamily="./#Press Start 2P"  FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#FF6B35" Click="Refresh_Click" Opacity="0.85"/>
-                            <Button x:Name="Past_Orders" Foreground="white"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FF6B35" Opacity="0.85"/>
+                            <Button x:Name="Past_Orders" Foreground="white"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FF6B35" Opacity="0.85" Click="Past_Orders_Click_1"/>
                         </StackPanel>
                     </Grid>
                     
