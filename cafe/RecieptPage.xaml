@@ -14,10 +14,10 @@
             <RowDefinition Height =" auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <Image HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top"  Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
-        
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="auto">
+        <Image HorizontalAlignment="Left" Grid.RowSpan="4" VerticalAlignment="Top"  Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
+
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="auto" Background="#030d22">
             <TextBlock Text="User login" Foreground="white"
                         Margin="30,5,10,5"
                        VerticalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"/>
@@ -27,18 +27,27 @@
                     Click="goBackButton_Click" Margin="30,5,10,4.6" Opacity="0.85"/>
         </StackPanel>
 
-        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" VerticalAlignment="top"
+        <Grid Grid.Row="1">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Row="0" Height="auto">
+            <TextBox x:Name="txtSearch" HorizontalAlignment="Left" VerticalAlignment="top"
                  Margin="10"
                  VerticalContentAlignment="Center" FontFamily="./#Press Start 2P" Background="#FE019A" FontSize="20"  Height="50" Width="300" Grid.Row="2" 
                  TextChanged="txtSearch_TextChanged" Opacity="0.71"></TextBox>
 
-        <Label  x:Name="txtSearchPlaceholder"  Margin="10,20"
+            <Label  x:Name="txtSearchPlaceholder"  Margin="10,20"
                  Content="Order Search.." FontFamily="./#Press Start 2P" Background="Transparent" 
                 Opacity="0.5" FontSize="20" IsHitTestVisible="False"  Grid.Row="2"/>
+        </Grid>
 
 
-
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="1">
             <ListView x:Name="ListViewProperty"
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
@@ -53,10 +62,9 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Button Width="240" Tag="{Binding ReceiptName}">
-                            <StackPanel Opacity="100">
-                                <Image Source="CafeImages/Americano.jpg" />
-                                <Label FontSize="15"
+                        <Button Width="400" Tag="{Binding ReceiptName}">
+                                    <StackPanel Opacity="100">
+                                        <Label FontSize="15"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
                                    Content="{Binding ReceiptName}" FontFamily="./#Press Start 2P" 
                                        FontWeight="Bold" />
@@ -66,6 +74,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
-
+       </Grid>
+      </Grid>
     </Grid>
 </Page>
