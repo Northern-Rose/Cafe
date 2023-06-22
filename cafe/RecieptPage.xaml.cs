@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,23 @@ namespace cafe
     /// </summary>
     public partial class RecieptPage : Page
     {
+        List<ReceiptInfo> listOfReceipts;
         public RecieptPage()
         {
             InitializeComponent();
+
+            listOfReceipts = new List<ReceiptInfo>();
+
+            DirectoryInfo di = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets");
+            FileInfo[] files = di.GetFiles("*.txt");
+            foreach (var file in files)
+            {
+                listOfReceipts.Add(new ReceiptInfo
+                {
+                    ReceiptName = file.Name
+                });
+            }
+            ListViewProperty.ItemsSource = listOfReceipts;
         }
 
         private void goBackButton_Click(object sender, RoutedEventArgs e)
@@ -42,6 +57,11 @@ namespace cafe
             {
                 txtSearchPlaceholder.Visibility = Visibility.Visible;
             }
+        }
+
+        public class ReceiptInfo
+        {
+            public string ReceiptName { get; set; }
         }
     }
 }

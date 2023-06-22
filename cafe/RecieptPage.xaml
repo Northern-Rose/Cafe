@@ -38,8 +38,8 @@
 
 
 
-        <Grid Grid.Row="1">
-            <ListView x:Name="ListViewProperty" Margin="10,0,20,10.4" 
+        <Grid Grid.Row="2">
+            <ListView x:Name="ListViewProperty"
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
                                   Background="Transparent"
@@ -53,12 +53,13 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Button Width="240" Tag="{Binding Name}">
+                        <Button Width="240" Tag="{Binding ReceiptName}">
                             <StackPanel Opacity="100">
-                                <Image Source="{Binding URLLink}" />
+                                <Image Source="CafeImages/Americano.jpg" />
                                 <Label FontSize="15"
-                                                VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                Content="{Binding Name}" FontFamily="./#Press Start 2P"  FontWeight="Bold" />
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Content="{Binding ReceiptName}" FontFamily="./#Press Start 2P" 
+                                       FontWeight="Bold" />
                             </StackPanel>
                         </Button>
                     </DataTemplate>
