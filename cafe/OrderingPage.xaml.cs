@@ -28,12 +28,12 @@ namespace cafe
 
         int counter = 0;
         double totalCost = 0;
-      
+
         public OrderingPage()
         {
             InitializeComponent();
 
-            
+
             var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();
@@ -60,7 +60,7 @@ namespace cafe
                 var line = DrinkSizes[i].Split(',');
                 listOfDrinkSizes.Add(new SizesOFCups
                 {
-                    sizeID = Int32.Parse( line[0]),
+                    sizeID = Int32.Parse(line[0]),
                     CupSize = line[1],
                 });
             }
@@ -72,9 +72,9 @@ namespace cafe
                 var line = drinkInfomation[i].Split(',');
                 listOfDrinkInfo.Add(new CupInfo
                 {
-                    CupInfoID = Int32.Parse( line[0]),
-                    CupInfoSize = Int32.Parse( line[1]),
-                    CupInfoPrize = Double.Parse( line[2]),
+                    CupInfoID = Int32.Parse(line[0]),
+                    CupInfoSize = Int32.Parse(line[1]),
+                    CupInfoPrize = double.Parse(line[2], System.Globalization.CultureInfo.InvariantCulture)
                 });
             }
         }
@@ -88,7 +88,7 @@ namespace cafe
 
         private void Tea_drinks_Click(object sender, RoutedEventArgs e)
         {
-            var newTeaFilterList = (from d in listOfDrinks where d.DrinkType == "Tea"  select d).ToList();
+            var newTeaFilterList = (from d in listOfDrinks where d.DrinkType == "Tea" select d).ToList();
 
             ListViewProperty.ItemsSource = newTeaFilterList;
         }
@@ -123,11 +123,14 @@ namespace cafe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var name = ((Button) sender).Tag;
+            var name = ((Button)sender).Tag;
 
             Beverages drink = (from d in listOfDrinks where d.Name.Equals(name) select d).First();
 
-            var abc = (from df in listOfDrinkInfo join ds in listOfDrinkSizes on df.CupInfoSize equals ds.sizeID where df.CupInfoID == drink.Id select new PriceInfo
+            var abc = (from df in listOfDrinkInfo
+                       join ds in listOfDrinkSizes on df.CupInfoSize equals ds.sizeID
+                       where df.CupInfoID == drink.Id
+                       select new PriceInfo
                        {
                            Size = ds.CupSize,
                            Price = df.CupInfoPrize,
@@ -142,7 +145,7 @@ namespace cafe
                 ThreeSizePopup.IsOpen = true;
                 PopupContent.ItemsSource = abc;
             }
-            else 
+            else
             {
                 ThreeSizePopup.IsOpen = false;
                 abc[0].location = counter;
@@ -160,7 +163,7 @@ namespace cafe
             }
         }
 
-        private void ThreePopUp_Click(object sender, RoutedEventArgs e) 
+        private void ThreePopUp_Click(object sender, RoutedEventArgs e)
         {
             var priceInfo = (PriceInfo)(((Button)sender).Tag);
 
@@ -198,7 +201,7 @@ namespace cafe
             ListViewProperty.ItemsSource = newAllDrinkFilterList;
         }
 
-        private void ListView_KeyDown(object sender, KeyEventArgs e) 
+        private void ListView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key != Key.Delete) return;
 
@@ -258,7 +261,7 @@ namespace cafe
         }
     }
 
-    public class Beverages 
+    public class Beverages
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -267,7 +270,7 @@ namespace cafe
         public string DrinkCost { get; set; }
     }
 
-    public class SizesOFCups 
+    public class SizesOFCups
     {
         public int sizeID { get; set; }
         public string CupSize { get; set; }
