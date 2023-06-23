@@ -231,7 +231,7 @@ namespace cafe
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            var datetime = DateTime.Now.ToString("ddMMyyyy-HHmmss");
+            var datetime = DateTime.Now.ToString("dd-MM-yyyy HH.mm.ss");
             FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
                 + "\\Homebrew\\Recipets\\" + datetime + ".txt", FileMode.Append, FileAccess.Write);
             StreamWriter sw = new StreamWriter(fs);
