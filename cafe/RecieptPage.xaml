@@ -56,13 +56,13 @@
                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel HorizontalAlignment="Center"/>
+                        <WrapPanel HorizontalAlignment="Left"/>
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Button Width="400" Tag="{Binding ReceiptName}">
+                                <Button Width="400" Height="80" Background="LightBlue" BorderThickness="4" BorderBrush="#240c3c" Tag="{Binding ReceiptName}">
                                     <StackPanel Opacity="100">
                                         <Label FontSize="15"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
