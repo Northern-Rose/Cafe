@@ -30,6 +30,7 @@ namespace cafe
         {
             InitializeComponent();
 
+
             var TypesOfDrinklines = File.ReadAllLines(@"../../ExcelLists/Drink_List.csv");
 
             listOfDrinks = new List<Beverages>();

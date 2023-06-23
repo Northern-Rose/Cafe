@@ -34,7 +34,7 @@ namespace cafe
             {
                 listOfReceipts.Add(new ReceiptInfo
                 {
-                    ReceiptName = file.Name
+                    ReceiptName = file.Name.Replace(".txt", "")
                 });
             }
             ListViewProperty.ItemsSource = listOfReceipts;
