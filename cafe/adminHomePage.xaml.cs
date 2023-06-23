@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using cafe;
+
 namespace cafe
 {
     /// <summary>
@@ -22,6 +24,8 @@ namespace cafe
     public partial class adminHomePage : Page
     {
         List<Beverages> listOfDrinks;
+        List<StaffMember> staffMembers; 
+
         public adminHomePage()
         {
             InitializeComponent();
@@ -42,6 +46,7 @@ namespace cafe
                 });
             }
             ListViewProperty.ItemsSource = listOfDrinks;
+            staffMembers = new List<StaffMember>(); 
         }
 
         private void LogOutButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +58,9 @@ namespace cafe
 
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
+            string searchText = txtSearch.Text.Trim();
+
+            // Update the visibility of the search placeholder based on the search text
             if (txtSearch.Text != "")
             {
                 txtSearchPlaceholder.Visibility = Visibility.Hidden;
@@ -61,6 +69,45 @@ namespace cafe
             {
                 txtSearchPlaceholder.Visibility = Visibility.Visible;
             }
+
+             }
+
+        private void StaffButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            StaffMember newStaffMember = new StaffMember();  // Create a new staff member.
+
+            // Prompt the admin for staff member details (Dialogue/Input fields are an option).
+
+            newStaffMember.Name = "John Doe"; // Replace with actual input from the admin.
+            newStaffMember.Position = "John Doe"; // Replace with actual input from the admin.
+
+            
+            newStaffMember.Code = GenerateUniqueCode(); // Generate a unique code for the staff member.
+
+           
+            staffMembers.Add(newStaffMember);  // Add the staff member to the collection.
+
+            
+            MessageBox.Show("Staff member added successfully! Code: " + newStaffMember.Code); ////This is Optional but you can Display a message to the admin indicating that the staff member was added successfully.
         }
+
+        private string GenerateUniqueCode()
+        {
+            
+            
+            string code = "STAFF" + DateTime.Now.ToString("yyyyMMddHHmmss"); // Generate a unique code not sure if we are using numbers or letter or both 
+            return code;
+        }
+        public class StaffMember //public class for staff. 
+        {
+            public string Name { get; set; }
+            public string Position { get; set; }
+            public string Code { get; set; }
+        } 
     }
-}
+ }
+  
+
+
+
