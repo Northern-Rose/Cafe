@@ -130,3 +130,4 @@ C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\RecieptPage.baml
 C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.baml
 C:\Users\GGPC\Desktop\106.1 Work\Cafe\cafe\obj\Debug\RecieptPage.g.cs
 C:\Users\GGPC\Desktop\106.1 Work\Cafe\cafe\obj\Debug\RecieptPage.baml
+C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.csprojAssemblyReference.cache

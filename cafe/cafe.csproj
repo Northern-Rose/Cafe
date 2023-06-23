@@ -80,8 +80,6 @@
     <Compile Include="SampleSaleWindow.xaml.cs">
       <DependentUpon>SampleSaleWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StaffMember.cs" />
-    <Compile Include="StaffMember1.cs" />
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
