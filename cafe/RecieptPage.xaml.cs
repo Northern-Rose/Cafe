@@ -38,6 +38,7 @@ namespace cafe
                 });
             }
             ListViewProperty.ItemsSource = listOfReceipts;
+            
         }
 
         private void goBackButton_Click(object sender, RoutedEventArgs e)
@@ -63,10 +64,11 @@ namespace cafe
         {
             receiptInfo.IsOpen = true;
 
-            string fileName = ((Button)sender).Tag.ToString() + ".txt"; 
+            string fileName = ((Button)sender).Tag.ToString(); 
 
-            string[] lines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets\\" + fileName);
+            string[] lines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets\\" + fileName + ".txt");
 
+            receiptInfoTitle.Content = fileName;
             receiptInfoListView.ItemsSource = lines;
         }
 
