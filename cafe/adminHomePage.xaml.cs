@@ -75,25 +75,13 @@ namespace cafe
 
         private void StaffButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            StaffMember newStaffMember = new StaffMember();  // Create a new staff member.
 
-            // Prompt the admin for staff member details (Dialogue/Input fields are an option).
-
-            newStaffMember.Name = "John Doe"; // Replace with actual input from the admin.
-            newStaffMember.Position = "John Doe"; // Replace with actual input from the admin.
-
-            
-            newStaffMember.Code = GenerateUniqueCode(); // Generate a unique code for the staff member.
-
-           
-            staffMembers.Add(newStaffMember);  // Add the staff member to the collection.
-
-            
-            MessageBox.Show("Staff member added successfully! Code: " + newStaffMember.Code); ////This is Optional but you can Display a message to the admin indicating that the staff member was added successfully.
+            Staff_Details page = new Staff_Details(); 
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page; 
         }
 
-        private string GenerateUniqueCode()
+            private string GenerateUniqueCode()
         {
             
             
