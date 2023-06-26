@@ -81,7 +81,7 @@
       </Grid>
         <Grid Grid.RowSpan="4">
             <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
-                <Grid Background="Green" Width="200" Height="200">
+                <Grid Background="DarkGray" Width="350" Height="450">
                     <ListView x:Name="receiptInfoListView"
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
