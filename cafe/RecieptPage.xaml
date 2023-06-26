@@ -62,7 +62,8 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                                <Button x:Name="receiptID_Button" Width="400" Height="80" Background="LightBlue" BorderThickness="4" BorderBrush="#240c3c" Tag="{Binding ReceiptName}" Click="receiptId_Button_Click">
+                                <Button x:Name="receiptID_Button" Width="400" Height="80" Background="LightBlue" BorderThickness="4" BorderBrush="#240c3c" 
+                                        Tag="{Binding ReceiptName}" Click="receiptId_Button_Click">
                                     <StackPanel Opacity="100">
                                         <Label FontSize="15"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -77,7 +78,24 @@
 
                 <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
                     <Grid Background="Green" Width="200" Height="200">
-                        
+                        <ListView x:Name="receiptInfoListView"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel HorizontalAlignment="Left"/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                     </Grid>
                 </Popup>
                 

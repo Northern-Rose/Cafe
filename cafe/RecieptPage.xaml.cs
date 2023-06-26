@@ -62,11 +62,19 @@ namespace cafe
         private void receiptId_Button_Click (object sender, RoutedEventArgs e)
         {
             receiptInfo.IsOpen = true;
+
+            string fileName = ((Button)sender).Tag.ToString() + ".txt"; 
+
+            string[] lines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets\\" + fileName);
+
+            receiptInfoListView.ItemsSource = lines;
         }
 
         public class ReceiptInfo
         {
             public string ReceiptName { get; set; }
         }
+
+        
     }
 }
