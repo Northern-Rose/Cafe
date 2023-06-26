@@ -59,6 +59,11 @@ namespace cafe
             }
         }
 
+        private void receiptId_Button_Click (object sender, RoutedEventArgs e)
+        {
+            receiptInfo.IsOpen = true;
+        }
+
         public class ReceiptInfo
         {
             public string ReceiptName { get; set; }

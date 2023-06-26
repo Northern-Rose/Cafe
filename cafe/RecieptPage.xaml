@@ -62,7 +62,7 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                                <Button Width="400" Height="80" Background="LightBlue" BorderThickness="4" BorderBrush="#240c3c" Tag="{Binding ReceiptName}">
+                                <Button x:Name="receiptID_Button" Width="400" Height="80" Background="LightBlue" BorderThickness="4" BorderBrush="#240c3c" Tag="{Binding ReceiptName}" Click="receiptId_Button_Click">
                                     <StackPanel Opacity="100">
                                         <Label FontSize="15"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -74,6 +74,13 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
+
+                <Popup x:Name="receiptInfo" IsOpen="False">
+                    <Grid Background="Green" Width="100" Height="100">
+                        
+                    </Grid>
+                </Popup>
+                
        </Grid>
       </Grid>
     </Grid>
