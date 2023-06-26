@@ -81,16 +81,18 @@
       </Grid>
         <Grid Grid.RowSpan="4">
             <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
-                <Grid Background="DarkGray" Width="350" Height="450">
+                <Grid Background="DarkGray" Width="auto" Height="auto">
                     <ListView x:Name="receiptInfoListView"
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
                                   Background="Transparent"
                                   BorderThickness="0"
+                                  FontSize="15"
+                                  FontFamily="./#Press Start 2P"
                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <WrapPanel HorizontalAlignment="Left"/>
+                                <WrapPanel Orientation="Vertical" HorizontalAlignment="Left"/>
                             </ItemsPanelTemplate>
                         </ListView.ItemsPanel>
 
