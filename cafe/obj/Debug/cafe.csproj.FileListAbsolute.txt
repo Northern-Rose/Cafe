@@ -135,3 +135,5 @@ C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\D
 C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\Debug\RecieptPage.baml
 C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\Debug\Staff_Details.g.cs
 C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\Debug\Staff_Details.baml
+C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\Staff_Details.g.cs
+C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\Staff_Details.baml

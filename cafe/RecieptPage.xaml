@@ -81,7 +81,10 @@
       </Grid>
         <Grid Grid.RowSpan="4">
             <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
-                <Grid Background="DarkGray" Width="auto" Height="auto">
+                <Grid Background="DarkGray" MinWidth="400" Width="auto" MinHeight="500" Height="auto">
+                    <StackPanel Height="20" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label Content="order num"  FontSize="15" FontFamily="./#Press Start 2P"/>
+                    </StackPanel>
                     <ListView x:Name="receiptInfoListView"
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
@@ -89,7 +92,8 @@
                                   BorderThickness="0"
                                   FontSize="15"
                                   FontFamily="./#Press Start 2P"
-                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
+                                  Margin="0,40,0,0"
+                                  HorizontalContentAlignment="left" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel Orientation="Vertical" HorizontalAlignment="Left"/>
