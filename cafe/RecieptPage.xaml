@@ -75,8 +75,8 @@
             </ListView>
         </Grid>
 
-                <Popup x:Name="receiptInfo" IsOpen="False">
-                    <Grid Background="Green" Width="100" Height="100">
+                <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
+                    <Grid Background="Green" Width="200" Height="200">
                         
                     </Grid>
                 </Popup>
