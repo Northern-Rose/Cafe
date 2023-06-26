@@ -131,3 +131,7 @@ C:\Users\rasmu\OneDrive\Documents\GitHub\Cafe\cafe\obj\Debug\SampleSaleWindow.ba
 C:\Users\GGPC\Desktop\106.1 Work\Cafe\cafe\obj\Debug\RecieptPage.g.cs
 C:\Users\GGPC\Desktop\106.1 Work\Cafe\cafe\obj\Debug\RecieptPage.baml
 C:\Users\270238705\OneDrive - UP Education\Documents\GitHub\Cafe\cafe\obj\Debug\cafe.csprojAssemblyReference.cache
+C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\Debug\RecieptPage.g.cs
+C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\Debug\RecieptPage.baml
+C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\Debug\Staff_Details.g.cs
+C:\Users\270140224\OneDrive - UP Education\Documents\GitHub\Cafe\Cafe\cafe\obj\Debug\Staff_Details.baml
