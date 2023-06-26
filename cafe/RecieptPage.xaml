@@ -76,30 +76,32 @@
             </ListView>
         </Grid>
 
-                <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
-                    <Grid Background="Green" Width="200" Height="200">
-                        <ListView x:Name="receiptInfoListView"
+                
+       </Grid>
+      </Grid>
+        <Grid Grid.RowSpan="4">
+            <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
+                <Grid Background="Green" Width="200" Height="200">
+                    <ListView x:Name="receiptInfoListView"
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
                                   Background="Transparent"
                                   BorderThickness="0"
                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
-                            <ListView.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <WrapPanel HorizontalAlignment="Left"/>
-                                </ItemsPanelTemplate>
-                            </ListView.ItemsPanel>
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel HorizontalAlignment="Left"/>
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
 
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <Label Content="{Binding}"/>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </Grid>
-                </Popup>
-                
-       </Grid>
-      </Grid>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </Popup>
+        </Grid>
     </Grid>
 </Page>
