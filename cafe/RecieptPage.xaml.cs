@@ -26,19 +26,20 @@ namespace cafe
         {
             InitializeComponent();
 
-            listOfReceipts = new List<ReceiptInfo>();
+            listOfReceipts = new List<ReceiptInfo>();  // Create a new list to store receipt information
 
-            DirectoryInfo di = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets");
-            FileInfo[] files = di.GetFiles("*.txt");
+            DirectoryInfo di = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets");    // Get the directory information for the receipts folder
+            FileInfo[] files = di.GetFiles("*.txt"); // Get all the files with the .txt extension in the receipts folder
             foreach (var file in files)
             {
+                // Iterate through each file
                 listOfReceipts.Add(new ReceiptInfo
                 {
-                    ReceiptName = file.Name.Replace(".txt", "")
+                    ReceiptName = file.Name.Replace(".txt", "")  // Add a new ReceiptInfo object to the list of receipts, with the receipt name derived from the file name
                 });
             }
-            ListViewProperty.ItemsSource = listOfReceipts;
-            
+            ListViewProperty.ItemsSource = listOfReceipts; // Set the ItemsSource property of the ListViewProperty to the list of receipts
+
         }
 
         private void goBackButton_Click(object sender, RoutedEventArgs e)
@@ -62,14 +63,14 @@ namespace cafe
 
         private void receiptId_Button_Click (object sender, RoutedEventArgs e)
         {
-            receiptInfo.IsOpen = true;
+            receiptInfo.IsOpen = true; // Open the receiptInfo popup
 
-            string fileName = ((Button)sender).Tag.ToString(); 
+            string fileName = ((Button)sender).Tag.ToString(); // Get the filename from the Tag property of the button
 
-            string[] lines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets\\" + fileName + ".txt");
+            string[] lines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\Recipets\\" + fileName + ".txt");   // Read all lines from the specified file
 
-            receiptInfoTitle.Content = fileName;
-            receiptInfoListView.ItemsSource = lines;
+            receiptInfoTitle.Content = fileName;   // Set the receiptInfoTitle to the filename
+            receiptInfoListView.ItemsSource = lines; // Set the ItemsSource of the receiptInfoListView to the lines array
         }
 
         public class ReceiptInfo
