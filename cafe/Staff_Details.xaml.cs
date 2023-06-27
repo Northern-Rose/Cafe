@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,24 +25,62 @@ namespace cafe
         private List<StaffMember> StaffMembers; 
 
        // Define a public property to access the staff members
-        public List <StaffMember> staffMembers  
-        {
-            //Return the value of the private field 
-            get { return StaffMembers; }
 
-            //Empty setter as we don't need to modify the property directly
-            set { } 
-
-
-        }
         public Staff_Details()
         {
             InitializeComponent();
             // Initialize the staff members list
             StaffMembers = new List<StaffMember>(); // Initialize the staff members list 
 
+            var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv");
 
-            LoadStaffMembers(); // Load existing staff members from the CSV file
+            /*StaffMembers = new List<StaffMember>();
+
+            for (int i = 0; i < TypesOfDrinklines.Length; i++)
+            {
+                var line = TypesOfDrinklines[i].Split(',');
+
+                StaffMembers.Add(new StaffMember
+                {
+                    ID = Int32.Parse(line[0]),
+                    Name = line[1],
+                    Code = line[2],
+                });
+            }*/
+
+            string newUser;
+
+            if(TypesOfDrinklines.Length == 0)
+            {
+                newUser = string.Format("{0},{1}, {2}", 1, "Robert", "1234");
+            }
+            else
+            {
+                StaffMembers = new List<StaffMember>();
+
+                for (int i = 0; i < TypesOfDrinklines.Length; i++)
+                {
+                    var line = TypesOfDrinklines[i].Split(',');
+
+                    StaffMembers.Add(new StaffMember
+                    {
+                        ID = Int32.Parse(line[0]),
+                        Name = line[1],
+                        Code = line[2],
+                    });
+                }
+
+                int newUserID = StaffMembers.Select(x => x.ID).Max() + 1; 
+                newUser = string.Format("{0},{1}, {2}", newUserID, "Robert", "1234");
+            }
+
+            using (FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv", FileMode.Append, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    sw.WriteLine(newUser);
+                }
+            }
 
         }
 
@@ -55,7 +94,6 @@ namespace cafe
             StaffMembers.Add(newStaffMember);
 
             // Save the staff member details to the CSV file
-            SaveStaffMembers();
 
             // Clear the input fields
             NameTextBox.Text = string.Empty;
@@ -66,18 +104,6 @@ namespace cafe
             StaffListView.ItemsSource = StaffMembers;
         }
 
-        private void LoadStaffMembers()
-        {
-            //load staff members to the csv file
-        }
-
-        private void SaveStaffMembers()
-        {
-            //save staff members to the csv file
-        }
-
-
-
 
         private string GenerateUniqueCode() 
         {
@@ -87,6 +113,7 @@ namespace cafe
         }
         public class StaffMember 
         {
+            public int ID { get; set; }
             public string Name { get; set; } 
             public string Code { get; set; }
         }

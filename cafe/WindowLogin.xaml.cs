@@ -61,7 +61,12 @@ namespace cafe
                 File.Copy(System.IO.Path.GetFullPath(@"..\..\ExcelLists\Size_Type.csv"), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Size_Type.csv");
 
             }
-            
+            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv"))
+            {
+                File.Copy(System.IO.Path.GetFullPath(@"..\..\ExcelLists\Staff_Members.csv"), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv");
+
+            }
+
             LoginPage page = new LoginPage();
 
             currentDisplayPage = page;
