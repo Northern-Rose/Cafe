@@ -82,8 +82,9 @@
         <Grid Grid.RowSpan="4">
             <Popup x:Name="receiptInfo" IsOpen="False" Placement="Center">
                 <Grid Background="DarkGray" MinWidth="400" Width="auto" MinHeight="500" Height="auto">
-                    <StackPanel Height="20" VerticalAlignment="Top" HorizontalAlignment="Center">
-                        <Label Content="order num"  FontSize="15" FontFamily="./#Press Start 2P"/>
+                    <StackPanel x:Name="popTit" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label x:Name="receiptInfoTitle" 
+                               FontSize="15" FontFamily="./#Press Start 2P"/>
                     </StackPanel>
                     <ListView x:Name="receiptInfoListView"
                                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
