@@ -47,8 +47,8 @@
             <Button Content="STAFF" BorderThickness="1" Grid.Column="1" Background="#FFFB00" FontFamily="./#Press Start 2P"  
                     BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" Click="StaffButton_Click" /> 
             
-            <Button Content="ORDERS" BorderThickness="1" Grid.Column="2" Background="#FFFB00" FontFamily="./#Press Start 2P" 
-                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+            <Button x:Name="OrderButton" Content="ORDERS" BorderThickness="1" Grid.Column="2" Background="#FFFB00" FontFamily="./#Press Start 2P" 
+                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" Click="OrderButton_Click" />
             
             <Button Content="FINANCIAL REPORTS" BorderThickness="1" Grid.Column="3"
                     Background="#FFFB00" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />

@@ -21,10 +21,13 @@ namespace cafe
     /// </summary>
     public partial class RecieptPage : Page
     {
+        private string previousPage;
         List<ReceiptInfo> listOfReceipts;
-        public RecieptPage()
+        public RecieptPage(string pageName)
         {
             InitializeComponent();
+
+            previousPage = pageName;
 
             listOfReceipts = new List<ReceiptInfo>();  // Create a new list to store receipt information
 
@@ -44,9 +47,26 @@ namespace cafe
 
         private void goBackButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderingPage page = new OrderingPage();
-            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
-            window.Content = page;
+            
+            if (previousPage == "OrderingPage")
+            {
+                OrderingPage page = new OrderingPage();
+                WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+                window.Content = page;
+            }
+            else if(previousPage == "adminHomePage")
+            {
+                adminHomePage page = new adminHomePage();
+                WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+                window.Content = page;
+            }
+            else if (previousPage == "Staff_Details")
+            {
+                Staff_Details page = new Staff_Details();
+                WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+                window.Content = page;
+            }
+
         }
 
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)

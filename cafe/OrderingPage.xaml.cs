@@ -268,7 +268,7 @@ namespace cafe
         {
             ThreeSizePopup.IsOpen = false;
 
-            RecieptPage page = new RecieptPage();
+            RecieptPage page = new RecieptPage("OrderingPage");
             WindowLogin window = (WindowLogin)Application.Current.MainWindow;
             window.Content = page;
         }

@@ -19,8 +19,11 @@ namespace cafe
     /// <summary>
     /// Interaction logic for Staff_Details.xaml
     /// </summary>
+
+    
     public partial class Staff_Details : Page
     {
+
         // Define a private field to store the staff members
         private List<StaffMember> StaffMembers; 
 
@@ -34,7 +37,7 @@ namespace cafe
 
             var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv");
 
-            /*StaffMembers = new List<StaffMember>();
+            StaffMembers = new List<StaffMember>();
 
             for (int i = 0; i < TypesOfDrinklines.Length; i++)
             {
@@ -46,46 +49,24 @@ namespace cafe
                     Name = line[1],
                     Code = line[2],
                 });
-            }*/
+            }
+            ListViewProperty.ItemsSource = StaffMembers;
+        }
 
-            string newUser;
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim();
 
-            if(TypesOfDrinklines.Length == 0)
+            // Update the visibility of the search placeholder based on the search text
+            if (txtSearch.Text != "")
             {
-                newUser = string.Format("{0},{1}, {2}", 1, "Robert", "1234");
+                txtSearchPlaceholder.Visibility = Visibility.Hidden;
             }
             else
             {
-                StaffMembers = new List<StaffMember>();
-
-                for (int i = 0; i < TypesOfDrinklines.Length; i++)
-                {
-                    var line = TypesOfDrinklines[i].Split(',');
-
-                    StaffMembers.Add(new StaffMember
-                    {
-                        ID = Int32.Parse(line[0]),
-                        Name = line[1],
-                        Code = line[2],
-                    });
-                }
-
-                int newUserID = StaffMembers.Select(x => x.ID).Max() + 1; 
-                newUser = string.Format("{0},{1}, {2}", newUserID, "Robert", "1234");
+                txtSearchPlaceholder.Visibility = Visibility.Visible;
             }
-
-            using (FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv", FileMode.Append, FileAccess.Write))
-            {
-                using (StreamWriter sw = new StreamWriter(fs))
-                {
-                    sw.WriteLine(newUser);
-                }
-            }
-
         }
-
-       
-
 
         private string GenerateUniqueCode() 
         {
@@ -93,13 +74,76 @@ namespace cafe
             string code = random.Next(1000, 10000).ToString();
             return code;
         }
-        public class StaffMember 
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoginPage page = new LoginPage();
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page;
+        }
+
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            adminHomePage page = new adminHomePage();
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page;
+        }
+
+        private void AddStaff_Click_1(object sender, RoutedEventArgs e)
+        {
+            string newUser;
+            var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv");
+
+            if (txtSearch.Text.Trim() != "")
+            {
+                if (TypesOfDrinklines.Length == 0)
+                {
+                    newUser = string.Format("{0},{1}, {2}", 1, txtSearch.Text.Trim(), "1234");
+                }
+                else
+                {
+                    StaffMembers = new List<StaffMember>();
+
+                    for (int i = 0; i < TypesOfDrinklines.Length; i++)
+                    {
+                        var line = TypesOfDrinklines[i].Split(',');
+
+                        StaffMembers.Add(new StaffMember
+                        {
+                            ID = Int32.Parse(line[0]),
+                            Name = line[1],
+                            Code = line[2],
+                        });
+                    }
+
+                    int newUserID = StaffMembers.Select(x => x.ID).Max() + 1;
+                    newUser = string.Format("{0},{1}, {2}", newUserID, txtSearch.Text.Trim(), "1234");
+                }
+
+                using (FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv", FileMode.Append, FileAccess.Write))
+                {
+                    using (StreamWriter sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine(newUser);
+                    }
+                }
+            }
+
+            ListViewProperty.ItemsSource = StaffMembers;
+        }
+
+        public class StaffMember
         {
             public int ID { get; set; }
-            public string Name { get; set; } 
+            public string Name { get; set; }
             public string Code { get; set; }
         }
 
-
+        private void OrdersButton_Click(object sender, RoutedEventArgs e)
+        {
+            RecieptPage page = new RecieptPage("Staff_Details");
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page;
+        }
     }
 }

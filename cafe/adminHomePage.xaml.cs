@@ -71,7 +71,7 @@ namespace cafe
                 txtSearchPlaceholder.Visibility = Visibility.Visible;
             }
 
-             }
+        }
 
         private void StaffButton_Click(object sender, RoutedEventArgs e)
         {
@@ -93,7 +93,14 @@ namespace cafe
             public string Name { get; set; }
             public string Position { get; set; }
             public string Code { get; set; }
-        } 
+        }
+
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            RecieptPage page = new RecieptPage("adminHomePage");
+            WindowLogin window = (WindowLogin)Application.Current.MainWindow;
+            window.Content = page;
+        }
     }
  }
   
