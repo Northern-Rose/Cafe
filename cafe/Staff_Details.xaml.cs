@@ -84,25 +84,7 @@ namespace cafe
 
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            StaffMember newStaffMember = new StaffMember();
-           newStaffMember.Name = NameTextBox.Text;
-           newStaffMember.Code = GenerateUniqueCode();
-
-            // Add the staff member to the list
-            StaffMembers.Add(newStaffMember);
-
-            // Save the staff member details to the CSV file
-
-            // Clear the input fields
-            NameTextBox.Text = string.Empty;
-
-
-            // Refresh the ListView
-            StaffListView.ItemsSource = null;
-            StaffListView.ItemsSource = StaffMembers;
-        }
+       
 
 
         private string GenerateUniqueCode() 

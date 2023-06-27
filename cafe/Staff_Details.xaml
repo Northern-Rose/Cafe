@@ -10,22 +10,93 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
-            <TextBox x:Name="NameTextBox" Width="200" Margin="0,0,10,0" />
-            <!--<Button x:Name="AddButton" Content="Add Staff" Click="AddButton_Click"/>-->
+        <Image  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="4" Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
+
+        <StackPanel Orientation="Horizontal"  
+                    Background="#030D22">
+            <Label Content="User Code 12345" FontSize="20" Foreground="White" FontFamily="./#Press Start 2P"  
+                       Margin="10" VerticalContentAlignment="Center"
+                        Height="40"/>
+            <Button Content="STAFF VIEW" FontSize="10" FontFamily="./#Press Start 2P"  Foreground="white"  Background="#E62882" 
+                    Margin="0"
+                    Height="40" Width="120"/>
+            <Button Content="LOG OUT" FontSize="10" Foreground="white" FontFamily="./#Press Start 2P"  
+                    Margin="10"
+                    Background="#E62882"  Height="40" Width="100"/>
         </StackPanel>
 
-        <ListView Grid.Row="1" x:Name="StaffListView" Margin="10">
-            <ListView.View>
-                <GridView>
-                    <!--<GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Code" DisplayMemberBinding="{Binding Code}"/>-->
-                </GridView>
-            </ListView.View>
+        <Grid Grid.Row="1"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Button Content="MENU" BorderThickness="1" Background="#FFFB00"  Foreground="black" FontFamily="./#Press Start 2P"  
+                    BorderBrush="#EEAD18"   FontSize="20" Opacity="0.71" />
+
+            <Button Content="STAFF" BorderThickness="1" Grid.Column="1" Background="#FFFB00" FontFamily="./#Press Start 2P"  
+                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+
+            <Button Content="ORDERS" BorderThickness="1" Grid.Column="2" Background="#FFFB00" FontFamily="./#Press Start 2P" 
+                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+
+            <Button Content="FINANCIAL REPORTS" BorderThickness="1" Grid.Column="3"
+                    Background="#FFFB00" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+        </Grid>
+
+
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" VerticalAlignment="top"
+                 Margin="10"
+                 VerticalContentAlignment="Center" FontFamily="./#Press Start 2P" Background="#FE019A" FontSize="20"  Height="50" Width="300" Grid.Row="2" 
+                 Opacity="0.71"></TextBox>
+
+        <Button Content="Add" FontSize="10" Foreground="white" FontFamily="./#Press Start 2P"  
+                    Margin="320,10,10,10"
+                    Background="#E62882"  
+                    Height="50" Width="100"
+                    HorizontalAlignment="Left"
+                    Grid.Row="2"/>
+
+        <Label  x:Name="txtSearchPlaceholder"  Margin="10,20"
+                 Content="Add new Staff.." FontFamily="./#Press Start 2P" Background="Transparent" 
+                Opacity="0.5" FontSize="20" IsHitTestVisible="False"  Grid.Row="2"/>
+
+        <ListView x:Name="ListViewProperty" Margin="10,0,20,10.4" 
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                  Background="Transparent"
+                  Grid.Row="3"
+                                  BorderThickness="0"
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Button Width="240" >
+                        <StackPanel Opacity="100">
+                            <Image Source="{Binding URLLink}" />
+                            <Label FontSize="15"
+                                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Content="{Binding Name}" FontFamily="./#Press Start 2P"  FontWeight="Bold" />
+                        </StackPanel>
+                    </Button>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
-    </Grid> 
+
+    </Grid>
 </Page>
