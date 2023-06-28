@@ -82,7 +82,7 @@
                         <ListView x:Name="PopupContent" Background="#030D22" BorderThickness="0">
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                     <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </ItemsPanelTemplate>
                             </ListView.ItemsPanel>
 
@@ -107,7 +107,7 @@
                         <RowDefinition Height =" *"/>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
-                        
+
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -115,7 +115,6 @@
                             <Button x:Name="Past_Orders" Foreground="white"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#FF6B35" Opacity="0.85" Click="Past_Orders_Click_1"/>
                         </StackPanel>
                     </Grid>
-                    
 
                     <Grid Grid.Row="1">
                         <ListView x:Name="ListViewOrderedDrinks" 
@@ -138,17 +137,39 @@
                     </Grid>
 
                     <Grid Grid.Row="2" Background="White" >
-
-                        <Label x:Name="CostDisplay" Content="Total Cost: $0"
-                               FontFamily="./#Press Start 2P" 
-                               FontWeight="Bold" FontSize="20"
-                               />
-
+                        <Label x:Name="CostDisplay" Content="Total Cost: $0" FontFamily="./#Press Start 2P" FontWeight="Bold" FontSize="20"/>
                     </Grid>
 
                     <Grid Grid.Row="3">
                         <Button x:Name="Confirm" Foreground="white" FontFamily="./#Press Start 2P" FontSize="20" Height="110" Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2" Click="Confirm_Click"/>
                     </Grid>
+
+                    <Popup Placement="Center" x:Name="StaffCodeInput" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="600" IsOpen="false">
+                        <Grid>
+                            <ListView Background="#030D22" BorderThickness="0">
+                                <ListView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </ItemsPanelTemplate>
+                                </ListView.ItemsPanel>
+
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            <Button Content="" Background="Red" Margin="109,-139,191,239"/>
+                            <Button Content="" Background="Red" Margin="4,-139,296,239"/>
+                            <Button Content="" Background="Red" Margin="214,-139,86,239"/>
+                            <Button Content="" Background="Red" Margin="109,-34,191,134"/>
+                            <Button Content="" Background="Red" Margin="4,-34,296,134"/>
+                            <Button Content="" Background="Red" Margin="214,-34,86,134"/>
+                            <Button Content="" Background="Red" Margin="109,71,191,29"/>
+                            <Button Content="" Background="Red" Margin="4,71,296,29"/>
+                            <Button Content="" Background="Red" Margin="214,71,86,29"/>
+                        </Grid>
+                    </Popup>
                 </Grid>
             </Grid>
         </Grid>

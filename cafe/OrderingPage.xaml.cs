@@ -26,6 +26,8 @@ namespace cafe
 
         List<CupInfo> listOfDrinkInfo;
 
+         List<StaffMember> StaffMembers;
+
         int counter = 0;
         double totalCost = 0;
 
@@ -243,6 +245,24 @@ namespace cafe
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
+            var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv");
+
+            StaffMembers = new List<StaffMember>();
+
+            for (int i = 0; i < TypesOfDrinklines.Length; i++)
+            {
+                var line = TypesOfDrinklines[i].Split(',');
+
+                StaffMembers.Add(new StaffMember
+                {
+                    ID = Int32.Parse(line[0]),
+                    Name = line[1],
+                    Code = line[2],
+                });
+            }
+
+            StaffCodeInput.IsOpen = true;
+
             var datetime = DateTime.Now.ToString("dd-MM-yyyy HH.mm.ss");
             FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)  // Create a file stream to write to the file
                 + "\\Homebrew\\Recipets\\" + datetime + ".txt", FileMode.Append, FileAccess.Write);
@@ -255,8 +275,6 @@ namespace cafe
             sw.Flush(); // Flush the stream to ensure all data is written
             sw.Close(); // Close the StreamWriter and FileStream
             fs.Close();
-
-
 
             listofOrder.Clear();  // Clear the list of orders
             ListViewOrderedDrinks.ItemsSource = null; // Clear the ItemsSource of the ListView to remove all previously displayed orders
@@ -305,5 +323,11 @@ namespace cafe
         public string FinalDrink { get; set; }
         public Beverages DrinkInfo { get; set; }
         public int location { get; set; }
+    }
+    public class StaffMember 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Code { get; set; }
     }
 }
