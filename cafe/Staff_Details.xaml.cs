@@ -23,11 +23,8 @@ namespace cafe
 
     public partial class Staff_Details : Page
     {
-
         // Define a private field to store the staff members
         private List<StaffMember> StaffMembers;
-
-        // Define a public property to access the staff members
 
         public Staff_Details()
         {
@@ -68,13 +65,6 @@ namespace cafe
             }
         }
 
-        private string GenerateUniqueCode()
-        {
-            Random random = new Random();
-            string code = random.Next(1000, 10000).ToString();
-            return code;
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             LoginPage page = new LoginPage();
@@ -89,28 +79,18 @@ namespace cafe
             window.Content = page;
         }
 
-        int random_numberOne;
-        int random_numberTwo;
-        int random_numberThree;
-        int random_numberFour;
-
         private void AddStaff_Click_1(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            Random rand = new Random();
+            List<int> number = new List<int>();
+            string code = "";
+            string FinalCode = "";
+            for (int i = 0; i < 4; i++)
             {
-                Random random = new Random();
-                random_numberOne = random.Next(1, 10);
-                Console.WriteLine(random_numberOne);
+                number.Add(rand.Next(1, 10));
+                code = number[i].ToString();
+                FinalCode = FinalCode + code;
             }
-            //random_numberOne = new Random().Next(1, 10);
-            //random_numberTwo = new Random().Next(1, 10);
-            //random_numberThree = new Random().Next(1, 10);
-            //random_numberFour = new Random().Next(1, 10);
-            //int newStaffCodeOne = int.Parse(random_numberOne.ToString() + random_numberTwo.ToString());
-            //int newStaffCodeTwo = int.Parse(random_numberThree.ToString() + random_numberFour.ToString());
-            //int newStaffCodeFinal = int.Parse(newStaffCodeOne.ToString() + newStaffCodeTwo.ToString());
-
-            //Console.WriteLine(newStaffCodeFinal);
 
             string newUser;
             var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv");
@@ -119,7 +99,7 @@ namespace cafe
             {
                 if (TypesOfDrinklines.Length == 0)
                 {
-                    newUser = string.Format("{0},{1}, {2}", 1, txtSearch.Text.Trim(), "1234");
+                    newUser = string.Format("{0},{1}, {2}", 1, txtSearch.Text.Trim(), FinalCode);
                 }
                 else
                 {
@@ -138,7 +118,7 @@ namespace cafe
                     }
 
                     int newUserID = StaffMembers.Select(x => x.ID).Max() + 1;
-                    newUser = string.Format("{0},{1}, {2}", newUserID, txtSearch.Text.Trim(), "1234");
+                    newUser = string.Format("{0},{1}, {2}", newUserID, txtSearch.Text.Trim(), FinalCode);
                 }
 
                 using (FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv", FileMode.Append, FileAccess.Write))
