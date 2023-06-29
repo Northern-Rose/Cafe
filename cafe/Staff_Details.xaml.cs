@@ -16,11 +16,6 @@ using System.Windows.Shapes;
 
 namespace cafe
 {
-    /// <summary>
-    /// Interaction logic for Staff_Details.xaml
-    /// </summary>
-
-
     public partial class Staff_Details : Page
     {
         // Define a private field to store the staff members
@@ -137,18 +132,18 @@ namespace cafe
             LoadStaffList();
         }
 
-        public class StaffMember
-        {
-            public int ID { get; set; }
-            public string Name { get; set; }
-            public string Code { get; set; }
-        }
-
         private void OrdersButton_Click(object sender, RoutedEventArgs e)
         {
             RecieptPage page = new RecieptPage("Staff_Details");
             WindowLogin window = (WindowLogin)Application.Current.MainWindow;
             window.Content = page;
+        }
+
+        public class StaffMember
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+            public string Code { get; set; }
         }
     }
 }

@@ -59,7 +59,7 @@
 
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Button Width="240" Click="Button_Click" Tag="{Binding Name}">
+                                    <Button Width="240" Click="AddDrinkToOrder_Click" Tag="{Binding Name}">
                                         <StackPanel Opacity="100">
                                             <Image Source="{Binding URLLink}" />
                                             <Label FontSize="15"
@@ -149,22 +149,22 @@
                         <Grid>
                             <TextBlock Text="Input Staff Code" Foreground="white" Margin="0,15,0,0" VerticalAlignment="top" HorizontalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"/>
 
-                            <TextBox Margin="0,48,0,0" Width="320" Height="65" Padding="20" VerticalAlignment="top" HorizontalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"></TextBox>
-                            
+                            <TextBox Name="CodeDisplay" Margin="0,48,0,0" Width="320" Height="65" VerticalAlignment="top" HorizontalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"></TextBox>
+
                             <WrapPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10">
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="1" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="2" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="3" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="4" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="5" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="6" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="7" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="8" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="9" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="1" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="1"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="2" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="2"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="3" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="3"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="4" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="4"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="5" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="6" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="6"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="7" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="7"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="8" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="8"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="9" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="9"/>
                                 <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="Delete" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="0" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="Close" Height="100" Width="100" Background="#a42464" Margin="5"/>
-                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "black" FontWeight="Black" FontSize="15" Content="Done" Height="100" Width="320" Background="Pink" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="0" Height="100" Width="100" Background="#a42464" Margin="5" Click="StaffCalcualtor_Click" Tag="10"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="Close" Height="100" Width="100" Background="#a42464" Margin="5" Click="CloseStaffPop_Click"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "black" FontWeight="Black" FontSize="15" Content="Done" Height="100" Width="320" Background="Pink" Margin="5" Click="FinalizeOrder_Click"/>
                             </WrapPanel>
                         </Grid>
                     </Popup>
