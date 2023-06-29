@@ -26,7 +26,6 @@ namespace cafe
 
         List<CupInfo> listOfDrinkInfo;
 
-         List<StaffMember> StaffMembers;
 
         int counter = 0;
         double totalCost = 0;
@@ -245,22 +244,6 @@ namespace cafe
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            var TypesOfDrinklines = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Staff_Members.csv");
-
-            StaffMembers = new List<StaffMember>();
-
-            for (int i = 0; i < TypesOfDrinklines.Length; i++)
-            {
-                var line = TypesOfDrinklines[i].Split(',');
-
-                StaffMembers.Add(new StaffMember
-                {
-                    ID = Int32.Parse(line[0]),
-                    Name = line[1],
-                    Code = line[2],
-                });
-            }
-
             StaffCodeInput.IsOpen = true;
 
             var datetime = DateTime.Now.ToString("dd-MM-yyyy HH.mm.ss");

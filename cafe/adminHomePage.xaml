@@ -51,7 +51,7 @@
                     BorderBrush="#161663"  FontSize="20" Opacity="0.71" Click="OrderButton_Click" />
             
             <Button Content="FINANCIAL REPORTS" BorderThickness="1" Grid.Column="3"
-                    Background="#FF0BD8E5"  Foreground="Black" FontFamily="./#Press Start 2P"  BorderBrush="#161663"  FontSize="20" Opacity="0.71" />
+                     Background="#FF0BD8E5"  Foreground="Black" FontFamily="./#Press Start 2P"  BorderBrush="#161663"  FontSize="20" Opacity="0.71" />
         </Grid>
 
 
