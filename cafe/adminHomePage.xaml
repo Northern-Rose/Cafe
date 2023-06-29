@@ -41,17 +41,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <Button Content="MENU" BorderThickness="1" Background="#FFFB00"  Foreground="black" FontFamily="./#Press Start 2P"  
-                    BorderBrush="#EEAD18"   FontSize="20" Opacity="0.71" />
-            
-            <Button Content="STAFF" BorderThickness="1" Grid.Column="1" Background="#FFFB00" FontFamily="./#Press Start 2P"  
-                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" Click="StaffButton_Click" /> 
-            
-            <Button x:Name="OrderButton" Content="ORDERS" BorderThickness="1" Grid.Column="2" Background="#FFFB00" FontFamily="./#Press Start 2P" 
-                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" Click="OrderButton_Click" />
+            <Button Content="MENU" BorderThickness="1" Background="#FF0BD8E5"  Foreground="#191970" FontFamily="./#Press Start 2P"  
+                    BorderBrush="#161663"   FontSize="20" Opacity="0.71" />
+
+            <Button Content="STAFF" BorderThickness="1" Grid.Column="1" Background="#FF0BD8E5"  Foreground="#191970" FontFamily="./#Press Start 2P"  
+                    BorderBrush="#161663"  FontSize="20" Opacity="0.71" Click="StaffButton_Click" />
+
+            <Button x:Name="OrderButton" Content="ORDERS" BorderThickness="1" Grid.Column="2" Background="#FF0BD8E5"  Foreground="#191970" FontFamily="./#Press Start 2P" 
+                    BorderBrush="#161663"  FontSize="20" Opacity="0.71" Click="OrderButton_Click" />
             
             <Button Content="FINANCIAL REPORTS" BorderThickness="1" Grid.Column="3"
-                    Background="#FFFB00" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+                    Background="#FF0BD8E5"  Foreground="#191970" FontFamily="./#Press Start 2P"  BorderBrush="#161663"  FontSize="20" Opacity="0.71" />
         </Grid>
 
 
