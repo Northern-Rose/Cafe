@@ -145,11 +145,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ExcelLists\Drink_List.csv" />
-    <None Include="ExcelLists\Drink_Size_Relationship.csv" />
-    <None Include="ExcelLists\Size_Type.csv" />
+    <Content Include="ExcelLists\Drink_List.csv" />
+    <Content Include="ExcelLists\Drink_Size_Relationship.csv" />
+    <Content Include="ExcelLists\Size_Type.csv" />
     <Resource Include="PressStart2P-Regular.ttf" />
-    <None Include="ExcelLists\Staff_Members.csv" />
+    <Content Include="ExcelLists\Staff_Members.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -190,7 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\1_RevtZAaAgh_CGLUj0BH3HQ_auto_x2-transformed.jpeg" />
-    <Resource Include="images\Cyberpunk_106_2_auto_x2-transformed.jpeg" />
+    <Resource Include="images\Cyberpunk_106_2_auto_x2-transformed.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="CafeImages\Americano.jpg" />

@@ -46,6 +46,8 @@ namespace cafe
                 Directory.CreateDirectory(CSVpath);
             }
 
+            
+
             if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_List.csv"))
             {
                 File.Copy(System.IO.Path.GetFullPath(@"..\..\ExcelLists\Drink_List.csv"), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Homebrew\\CSV_Files\\Drink_List.csv");

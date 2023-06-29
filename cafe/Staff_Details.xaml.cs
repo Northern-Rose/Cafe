@@ -29,6 +29,11 @@ namespace cafe
         public Staff_Details()
         {
             InitializeComponent();
+            LoadStaffList();
+        }
+
+        private void LoadStaffList()
+        {
             // Initialize the staff members list
             StaffMembers = new List<StaffMember>(); // Initialize the staff members list 
 
@@ -49,7 +54,6 @@ namespace cafe
             }
             ListViewProperty.ItemsSource = StaffMembers;
         }
-
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             string searchText = txtSearch.Text.Trim();
@@ -130,7 +134,7 @@ namespace cafe
                 }
             }
             txtSearch.Text = "";
-            ListViewProperty.ItemsSource = StaffMembers;
+            LoadStaffList();
         }
 
         public class StaffMember
