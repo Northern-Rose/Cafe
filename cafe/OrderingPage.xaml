@@ -145,21 +145,23 @@
                         <Button x:Name="Confirm" Foreground="black" FontFamily="./#Press Start 2P" FontSize="20" Height="110" Content="Place Order" Background="#FF0BD8E5" Grid.ColumnSpan="2" Click="Confirm_Click"/>
                     </Grid>
 
-                    <Popup Placement="Center" x:Name="StaffCodeInput" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="400" Height="600" IsOpen="false">
+                    <Popup Placement="Center" x:Name="StaffCodeInput" HorizontalAlignment="Center" VerticalAlignment="Center" Width="350" Height="500" IsOpen="false">
                         <Grid>
-                            <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
-                                <Button Content="" Height="100" Width="100" Background="Red" Margin="5"/>
+                            <TextBlock Text="Input Staff Code" Foreground="white" Margin="0,15,0,0" VerticalAlignment="top" HorizontalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"/>
+                            
+                            <WrapPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10">
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="1" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="2" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="3" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="4" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="5" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="6" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="7" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="8" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="9" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="Delete" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="0" Height="100" Width="100" Background="#a42464" Margin="5"/>
+                                <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="Close" Height="100" Width="100" Background="#a42464" Margin="5"/>
                             </WrapPanel>
                         </Grid>
                     </Popup>
