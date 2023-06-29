@@ -357,7 +357,7 @@ namespace cafe
                 var datetime = DateTime.Now.ToString("dd-MM-yyyy HH.mm.ss");
                 // Creates a file stream to write to the file
                 FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)  
-                    + "\\Homebrew\\Recipets\\" + datetime + " : " + codeInput + ".txt", FileMode.Append, FileAccess.Write);
+                    + "\\Homebrew\\Recipets\\" + datetime + " " + codeInput + ".txt", FileMode.Append, FileAccess.Write);
                 // Creates a StreamWriter to write text to the file stream
                 StreamWriter sw = new StreamWriter(fs);
 
@@ -379,6 +379,21 @@ namespace cafe
                 // Resets the total cost to zero
                 totalCost = 0;  
                 CostDisplay.Content = "Total Cost: $" + totalCost;
+
+                codeInput = "";
+                CodeDisplay.Text = codeInput;
+                StaffCodeInput.IsOpen = false;
+            }
+        }
+
+        private void BackspaceNumber_Click(object sender, RoutedEventArgs e)
+        {
+            int inter = codeInput.Length - 1; // Subtract 1 to get the last character index
+
+            if (inter >= 0 && inter < codeInput.Length)
+            {
+                codeInput = codeInput.Remove(inter, 1);
+                CodeDisplay.Text = codeInput;
             }
         }
     }
