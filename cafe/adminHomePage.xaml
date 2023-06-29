@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="adminHomePage">
-
+    <!--declearing the rows and there sizes-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -16,8 +16,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <!--Adding the background image to the page-->
         <Image  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="4" Source="images/Cyberpunk_106_2_auto_x2-transformed.jpeg" Opacity="0.7" Stretch="Fill"/>
-
+        <!--header panel for user code, staff view and log out button-->
         <StackPanel Orientation="Horizontal"  
                     Background="#030D22">
             <Label Content="User Code 12345" FontSize="20" Foreground="White" FontFamily="./#Press Start 2P"  
@@ -31,6 +32,7 @@
                     Background="#E62882"  Click="LogOutButton_Click"  Height="40" Width="100"/>
         </StackPanel>
 
+        
         <Grid Grid.Row="1"  >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

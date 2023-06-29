@@ -55,7 +55,7 @@
         </Grid>
 
         <TextBox x:Name="txtSearch" HorizontalAlignment="Left" VerticalAlignment="top"
-                 Margin="0,10,0,0" TextChanged="txtSearch_TextChanged"
+                 Margin="10,10,0,0" TextChanged="txtSearch_TextChanged"
                  VerticalContentAlignment="Center" FontFamily="./#Press Start 2P" Background="#FE019A" FontSize="20"  Height="50" Width="300" Grid.Row="2" 
                  Opacity="0.71"></TextBox>
 
