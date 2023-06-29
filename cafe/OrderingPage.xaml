@@ -149,7 +149,7 @@
                         <Grid>
                             <TextBlock Text="Input Staff Code" Foreground="white" Margin="0,15,0,0" VerticalAlignment="top" HorizontalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"/>
 
-                            <TextBox Margin="0,48,0,0" Width="320" Height="65" VerticalAlignment="top" HorizontalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"></TextBox>
+                            <TextBox Margin="0,48,0,0" Width="320" Height="65" Paddin0" VerticalAlignment="top" HorizontalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"></TextBox>
                             
                             <WrapPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10">
                                 <Button FontFamily="./#Press Start 2P" BorderThickness="0" Foreground= "White" FontWeight="Black" FontSize="15" Content="1" Height="100" Width="100" Background="#a42464" Margin="5"/>
