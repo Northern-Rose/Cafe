@@ -20,7 +20,7 @@
                        VerticalAlignment="Center" FontFamily="./#Press Start 2P" FontSize="20"/>
             <Button x:Name="LogOutButton" VerticalAlignment="Center" Background="#E62882" Foreground="white"
                     FontFamily="./#Press Start 2P" FontSize="20" Content="Log Out" Height="60" Width="150" 
-                    Click="LogOutButton_Click" Margin="30,5,10,4.6" Opacity="0.85"/>
+                    Click="LogOutButton_Click" Margin="30,5,10,4.6" />
         </StackPanel>
 
         <Grid Grid.Row="1">
@@ -36,12 +36,12 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="Choco_Drinks" Margin="20,30" Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10" Content="Choco Drinks" Width="160" Height="80" Background="#FE019A" Click="Choco_Drinks_Click" Opacity="0.85"></Button>
-                        <Button x:Name="Cold_Drinks"  Margin="20,30"  Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"   Content="Cold Drinks" Width="160" Height="80" Background="#FE019A" Click="Cold_Drinks_Click" Opacity="0.85"/>
-                        <Button x:Name="Soft_Drinks"  Margin="20,30" Foreground="Black"  FontFamily="./#Press Start 2P" FontSize="10"  Content="Soft Drinks" Width="160" Height="80" Background="#FE019A" Click="Soft_Drinks_Click" Opacity="0.85"/>
-                        <Button x:Name="Coffee_Drinks"  Margin="20,30" Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"   Content="Coffee Drinks" Width="160" Height="80" Background="#FE019A" Click="Coffee_Drinks_Click" Opacity="0.85"/>
-                        <Button x:Name="Tea_drinks"  Margin="20,30"   Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click" Opacity="0.85" />
-                        <Button x:Name="All_Drinks"  Margin="20,30" Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"  Content="All" Width="160" Height="80" Background="#FE019A" Click="All_Drinks_Click" Opacity="0.85"/>
+                        <Button x:Name="Choco_Drinks" Margin="20,30" Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10" Content="Choco Drinks" Width="160" Height="80" Background="#FE019A" Click="Choco_Drinks_Click" ></Button>
+                        <Button x:Name="Cold_Drinks"  Margin="20,30"  Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"   Content="Cold Drinks" Width="160" Height="80" Background="#FE019A" Click="Cold_Drinks_Click" />
+                        <Button x:Name="Soft_Drinks"  Margin="20,30" Foreground="Black"  FontFamily="./#Press Start 2P" FontSize="10"  Content="Soft Drinks" Width="160" Height="80" Background="#FE019A" Click="Soft_Drinks_Click" />
+                        <Button x:Name="Coffee_Drinks"  Margin="20,30" Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"   Content="Coffee Drinks" Width="160" Height="80" Background="#FE019A" Click="Coffee_Drinks_Click" />
+                        <Button x:Name="Tea_drinks"  Margin="20,30"   Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"  Content="Tea Drinks" Width="160" Height="80" Background="#FFFE019A" Click="Tea_drinks_Click"  />
+                        <Button x:Name="All_Drinks"  Margin="20,30" Foreground="Black" FontFamily="./#Press Start 2P" FontSize="10"  Content="All" Width="160" Height="80" Background="#FE019A" Click="All_Drinks_Click" />
                     </StackPanel>
 
                     <Grid Grid.Row="1">
@@ -111,8 +111,8 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button x:Name="Refresh" Foreground="Black" Margin="20,30" FontFamily="./#Press Start 2P"  FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#E62882" Click="Refresh_Click" Opacity="0.85"/>
-                            <Button x:Name="Past_Orders" Foreground="Black"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#E62882" Opacity="0.85" Click="Past_Orders_Click_1"/>
+                            <Button x:Name="Refresh" Foreground="Black" Margin="20,30" FontFamily="./#Press Start 2P"  FontSize="10" Content="Clear Order" Width="160" Height="80" Background="#E62882" Click="Refresh_Click" />
+                            <Button x:Name="Past_Orders" Foreground="Black"  Margin="20,30"  FontFamily="./#Press Start 2P" FontSize="10"   Content="Past Orders" Width="160" Height="80" Background="#E62882"  Click="Past_Orders_Click_1"/>
                         </StackPanel>
                     </Grid>
 
