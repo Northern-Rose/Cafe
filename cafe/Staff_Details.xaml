@@ -41,17 +41,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <Button Content="MENU" BorderThickness="1" Background="#FFFB00"  Foreground="black" FontFamily="./#Press Start 2P"  
-                    BorderBrush="#EEAD18"   FontSize="20" Opacity="0.71" Click="Menu_Click" />
+            <Button Content="MENU" BorderThickness="1" Background="#FF0BD8E5"  Foreground="black" FontFamily="./#Press Start 2P"  
+                    BorderBrush="#FF0BD8E5"   FontSize="20" Opacity="0.71" Click="Menu_Click" />
 
-            <Button Content="STAFF" BorderThickness="1" Grid.Column="1" Background="#FFFB00" FontFamily="./#Press Start 2P"  
-                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+            <Button Content="STAFF" BorderThickness="1" Grid.Column="1" Background="#FF0BD8E5" FontFamily="./#Press Start 2P"  
+                    BorderBrush="#FF0BD8E5"  FontSize="20" Opacity="0.71" />
 
-            <Button x:Name="OrdersButton" Content="ORDERS" BorderThickness="1" Grid.Column="2" Background="#FFFB00" FontFamily="./#Press Start 2P" 
-                    BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" Click="OrdersButton_Click" />
+            <Button x:Name="OrdersButton" Content="ORDERS" BorderThickness="1" Grid.Column="2" Background="#FF0BD8E5" FontFamily="./#Press Start 2P" 
+                    BorderBrush="#FF0BD8E5"  FontSize="20" Opacity="0.71" Click="OrdersButton_Click" />
 
             <Button Content="FINANCIAL REPORTS" BorderThickness="1" Grid.Column="3"
-                    Background="#FFFB00" FontFamily="./#Press Start 2P"  BorderBrush="#EEAD18"  FontSize="20" Opacity="0.71" />
+                    Background="#FF0BD8E5" FontFamily="./#Press Start 2P"  BorderBrush="#FF0BD8E5"  FontSize="20" Opacity="0.71" />
         </Grid>
 
         <TextBox x:Name="txtSearch" HorizontalAlignment="Left" VerticalAlignment="top"
@@ -83,7 +83,7 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Button  Width="auto" MinWidth="400" Height="80" Background="LightBlue" BorderThickness="4" BorderBrush="#240c3c" >
+                    <Button  Width="auto" MinWidth="400" Height="80" Background="#FF0BD8E5" BorderThickness="4" BorderBrush="#240c3c" >
                         <StackPanel Opacity="100">
                             <Label FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{Binding Name}" FontFamily="./#Press Start 2P"  FontWeight="Bold" />
                             <Label FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{Binding Code}" FontFamily="./#Press Start 2P"  FontWeight="Bold" />
